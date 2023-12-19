@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r echo = FALSE}
+```{r message = FALSE}
 
 library(fredr)
 library(tidyverse)
@@ -26,7 +26,7 @@ fredr_set_key('2ce72ebb6c7e053880ec7ad5a950237f')
 
 ```
 
-```{r}
+```{r message = FALSE}
 
 # gather data
 start_date <- "1978-01-01"
@@ -267,35 +267,13 @@ ggplot(visual2, aes(x = date, y = value, color = variable)) +
 
 ```
 
-```{r warning=false}
+```{r warning = FALSE}
 
 # eda
-
-# check for nulls
-sum(is.na(final))
-
-# summary statistics
-summary(final)
 
 # correlation matrix
 cor_matrix <- cor(final %>% select(-date))
 chart.Correlation(cor_matrix)
-
-```
-
-```{r}
-
-# univariate forecast: https://www.simplilearn.com/tutorials/data-science-tutorial/time-series-forecasting-in-r
-
-arima <- auto.arima(final$consumer_sentiment)
-arima
-
-# plot residuals
-plot.ts(arima$residuals)
-
-# forecast next 2 years
-forecast <- forecast(arima, level=c(95), h=2*12)
-plot(forecast)
 
 ```
 
