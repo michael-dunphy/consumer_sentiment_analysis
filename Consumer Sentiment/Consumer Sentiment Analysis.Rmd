@@ -1,0 +1,634 @@
+---
+title: "Consumer Sentiment Analysis"
+author: "Michael Dunphy"
+date: "2023-12-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo = FALSE}
+
+library(fredr)
+library(tidyverse)
+library(forecast)
+library(ggplot2)
+library(fpp3)
+library(tsibble)
+library(gtrendsR)
+library(tidyquant)
+library(PerformanceAnalytics)
+
+# set api key
+fredr_set_key('2ce72ebb6c7e053880ec7ad5a950237f')
+
+```
+
+```{r}
+
+# gather data
+start_date <- "1978-01-01"
+end_date <- "2023-11-01"
+
+# UMICH Consumer Sentiment Index: https://fred.stlouisfed.org/series/UMCSENT
+consumer_sentiment <- fredr(
+  series_id = "UMCSENT",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "lin"
+)
+
+# Unemployment Rate: https://fred.stlouisfed.org/series/UNRATE
+unemployment <- fredr(
+  series_id = "UNRATE",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "lin"
+)
+
+# YOY % Change in Unemployment Rate: https://fred.stlouisfed.org/series/UNRATE
+unemployment_change <- fredr(
+  series_id = "UNRATE",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "pc1"
+)
+
+# YOY % Change in Real Income: https://fred.stlouisfed.org/series/DSPIC96
+income <- fredr(
+  series_id = "DSPIC96",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "pc1"
+)
+
+# YOY % Change in CPI: https://fred.stlouisfed.org/series/CPIAUCSL
+cpi <- fredr(
+  series_id = "CPIAUCSL",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "pc1"
+)
+
+# Avg 30-year Mortgage Rate: https://fred.stlouisfed.org/series/MORTGAGE30US
+mortgage <- fredr(
+  series_id = "MORTGAGE30US",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "lin"
+)
+
+# YOY % Change in Mortgage Rate: https://fred.stlouisfed.org/series/MORTGAGE30US
+mortgage_change <- fredr(
+  series_id = "MORTGAGE30US",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "pc1"
+)
+
+# YOY % Change in Median House Price: https://fred.stlouisfed.org/series/MSPUS
+house <- fredr(
+  series_id = "MSPUS",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "q", # quarterly
+  units = "pc1"
+)
+
+# YOY % Change in Personal Consumption: https://fred.stlouisfed.org/series/PCE
+consumption <- fredr(
+  series_id = "PCE",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "pc1"
+)
+
+# NBER Recession Indicator: https://fred.stlouisfed.org/series/USREC
+recession_indicator <- fredr(
+  series_id = "USREC",
+  observation_start = as.Date(start_date),
+  observation_end = as.Date(end_date),
+  frequency = "m", # monthly
+  units = "lin"
+)
+
+# YOY % Change in S&P 500 Index: https://finance.yahoo.com/quote/%5EGSPC?p=%5EGSPC
+getSymbols("^GSPC", from = "1977-01-01",
+           to = end_date,
+           warnings = FALSE,
+           auto.assign = TRUE,
+           src = "yahoo")
+
+# YOY % Change in US Dollar Index: 
+getSymbols("DX-Y.NYB", from = "1977-01-01",
+           to = end_date,
+           warnings = FALSE,
+           auto.assign = TRUE,
+           src = "yahoo")
+
+```
+
+```{r}
+
+# process fred data
+process <- function(data, name) {
+  data[name] <- data$value 
+  
+  data %>%
+    select(date, all_of(name))
+}
+
+consumer_sentiment_modified <- process(consumer_sentiment, 'consumer_sentiment')
+unemployment_modified <- process(unemployment, 'unemployment_rate')
+unemployment_change_modified <- process(unemployment_change, 'unemployment_rate_change')
+income_modified <- process(income, 'income')
+cpi_modified <- process(cpi, 'cpi')
+mortgage_modified <- process(mortgage, 'mortgage')
+mortgage_change_modified <- process(mortgage_change, 'mortgage_change')
+house_modified <- process(house, 'house')
+consumption_modified <- process(consumption, 'consumption')
+recession_indicator_modified <- process(recession_indicator, 'recession_indicator')
+
+# breakout quarters to months for house data
+house_modified <- house_modified %>%
+  complete(date = seq.Date(min(date), max(date), by = "month")) %>%
+  fill(house)
+
+# process sp500 data
+sp500_modified <- as.data.frame(GSPC) %>%
+    rownames_to_column('date_day') %>%
+    select(date_day, GSPC.Close) %>%
+    mutate(date = as.Date(paste(substr(date_day, start = 1, stop = 7), "-01", sep=''))) %>%
+    group_by(date) %>%
+    summarize(avg_close = mean(GSPC.Close)) %>%
+    mutate(sp500 = ((avg_close - lag(avg_close, 12)) / lag(avg_close, 12)) * 100) %>%
+    select(-avg_close) %>%
+    filter(date >= start_date)
+
+# process dollar_index data
+dollar_index_modified <- as.data.frame(`DX-Y.NYB`) %>%
+    rownames_to_column('date_day') %>%
+    select(date_day, `DX-Y.NYB.Close`) %>%
+    filter(!is.na(`DX-Y.NYB.Close`)) %>%
+    mutate(date = as.Date(paste(substr(date_day, start = 1, stop = 7), "-01", sep=''))) %>%
+    group_by(date) %>%
+    summarize(avg_close = mean(`DX-Y.NYB.Close`)) %>%
+    mutate(dollar_index = ((avg_close - lag(avg_close, 12)) / lag(avg_close, 12)) * 100) %>%
+    select(-avg_close) %>%
+    filter(date >= start_date)
+
+```
+
+
+```{r}
+
+# join data
+
+join <- consumer_sentiment_modified %>%
+    left_join(unemployment_modified, by = c('date' = 'date')) %>%
+    left_join(unemployment_change_modified, by = c('date' = 'date')) %>%
+    left_join(income_modified, by = c('date' = 'date')) %>%
+    left_join(cpi_modified, by = c('date' = 'date')) %>%
+    left_join(mortgage_modified, by = c('date' = 'date')) %>%
+    left_join(mortgage_change_modified, by = c('date' = 'date')) %>%
+    left_join(house_modified, by = c('date' = 'date')) %>%
+    left_join(consumption_modified, by = c('date' = 'date')) %>%
+    left_join(sp500_modified, by = c('date' = 'date')) %>%
+    left_join(dollar_index_modified, by = c('date' = 'date')) %>%
+    left_join(recession_indicator_modified, by = c('date' = 'date'))
+
+head(join)
+
+```
+
+```{r}
+
+# processing for modeling
+final <- join[rowSums(is.na(join)) == 0,]
+
+# visualize
+final_pivoted <- final %>%
+  mutate(`UMICH Consumer Sentiment` = consumer_sentiment,
+         `Unemployment Rate` = unemployment_rate, 
+         `YOY % Change in Unemployment Rate` = unemployment_rate_change,
+         `YOY % Change in Median Real Disposable Income` = income, 
+         `YOY % Change in Personal Consumption` = consumption,
+         `YOY % Change in CPI` = cpi, 
+         `YOY % Change in S&P 500` = sp500, 
+         `YOY % Change in Dollar Index` = dollar_index,
+         `Avg 30-year Mortgage Rate` = mortgage,
+         `YOY % Change in Mortgage Rate` = mortgage_change,
+         `YOY % Change in Median House Price` = house,
+         `NBER Recession Indicator` = recession_indicator) %>%
+  select(date, contains(" ")) %>%
+  pivot_longer(cols = -c(date), 
+               names_to = 'variable', values_to = 'value')
+
+visual1 <- final_pivoted %>%
+  filter(variable %in% c("UMICH Consumer Sentiment", 
+                         "Unemployment Rate", 
+                         "YOY % Change in Unemployment Rate", 
+                         "YOY % Change in Median Real Disposable Income",
+                         "YOY % Change in Personal Consumption",
+                         "YOY % Change in CPI"))
+
+visual2 <- final_pivoted %>%
+  filter(variable %in% c("YOY % Change in S&P 500", 
+                         "YOY % Change in Dollar Index", 
+                         "Avg 30-year Mortgage Rate", 
+                         "YOY % Change in Mortgage Rate",
+                         "YOY % Change in Median House Price",
+                         "NBER Recession Indicator"))
+
+# create visuals
+ggplot(visual1, aes(x = date, y = value, color = variable)) +
+  geom_line() +
+  labs(x = "", y = "Value", color = 'Variable', title = "Economic Indicators Over Time", caption = 'Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance | Visual by Michael Dunphy, @mtdunphy') +
+  theme_minimal() +
+  theme(legend.position = "none", plot.caption = element_text(size = 7, hjust=0)) +
+  facet_wrap(~variable, scales = "free_y", ncol = 2)
+
+ggplot(visual2, aes(x = date, y = value, color = variable)) +
+  geom_line() +
+  labs(x = "", y = "Value", color = 'Variable', title = "Economic Indicators Over Time", caption = 'Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance | Visual by Michael Dunphy, @mtdunphy') +
+  theme_minimal() +
+  theme(legend.position = "none", plot.caption = element_text(size = 7, hjust=0)) +
+  facet_wrap(~variable, scales = "free_y", ncol = 2)
+
+```
+
+```{r warning=false}
+
+# eda
+
+# check for nulls
+sum(is.na(final))
+
+# summary statistics
+summary(final)
+
+# correlation matrix
+cor_matrix <- cor(final %>% select(-date))
+chart.Correlation(cor_matrix)
+
+```
+
+```{r}
+
+# univariate forecast: https://www.simplilearn.com/tutorials/data-science-tutorial/time-series-forecasting-in-r
+
+arima <- auto.arima(final$consumer_sentiment)
+arima
+
+# plot residuals
+plot.ts(arima$residuals)
+
+# forecast next 2 years
+forecast <- forecast(arima, level=c(95), h=2*12)
+plot(forecast)
+
+```
+
+```{r}
+
+# multivariate forecast: https://stackoverflow.com/questions/70175496/how-to-plot-my-multivariable-regression-time-series-model-in-r
+
+train <- as_tsibble(final) %>%
+    filter(date < '2017-01-01')
+
+test <- as_tsibble(final) %>%
+    filter(date >= '1978-01-01') 
+
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment + season() + trend()))
+
+check <- lm(consumer_sentiment ~ ., data = train)
+summary(check)
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(as_tsibble(final)) + 
+    labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators from 1978-2016") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 1978 to 2023") +
+    labs(caption = "Note: Economic indicators used in estimating consumer sentiment include unemployement rate,YOY % change in unemployment rate, 
+YOY % change in median real disposable income, YOY % change in personal consumption, YOY % change in consumer price index, 
+YOY % change in S&P 500 index, YOY % change in dollar index, Avg 30-year mortgage rate, YOY % change in mortgage rate, 
+YOY % change in median house price, and NBER recession indicator. Training data is monthly from Jan 1978 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '5 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r}
+
+# narrow date range
+
+start_date <- '2004-01-01'
+
+plot_range <- as_tsibble(final) %>%
+  filter(date >= start_date)
+
+test <- as_tsibble(final) %>%
+    filter(date >= start_date) 
+
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment + season() + trend()))
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(plot_range) + 
+    labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators from 1978-2016") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+    labs(caption = "Note: Economic indicators used in estimating consumer sentiment include unemployement rate,YOY % change in unemployment rate, 
+YOY % change in median real disposable income, YOY % change in personal consumption, YOY % change in consumer price index, 
+YOY % change in S&P 500 index, YOY % change in dollar index, Avg 30-year mortgage rate, YOY % change in mortgage rate, 
+YOY % change in median house price, and NBER recession indicator. Training data is monthly from Jan 1978 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r warning=FALSE}
+
+# adding google trends
+# https://trends.google.com/trends/explore?cat=16&date=all&geo=US&q=recession&hl=en
+# https://trends.google.com/trends/explore?cat=16&date=all&geo=US&q=inflation&hl=en
+# https://trends.google.com/trends/explore?cat=16&date=all&geo=US&q=prices&hl=en
+# news category is represented with 16, all categories is 0
+
+
+# search1 <- gtrends(c("inflation"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#   select(date, keyword, hits)
+# 
+# search2 <- gtrends(c("recession"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#   select(date, keyword, hits)
+# 
+# search3 <- gtrends(c("prices"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#   select(date, keyword, hits)
+# 
+# search <- union(search1, union(search2, search3))
+
+search <- read.csv("GTrends Exported - All.csv") %>%
+    mutate(date = as.Date(date))
+
+search_pivoted <- search %>%
+  pivot_wider(names_from = keyword, values_from = hits) %>%
+  select(date, `inflation`, recession, prices)
+
+p <- ggplot() + 
+  geom_line(data = search, aes(x = date, y = hits, col = keyword)) +
+  labs(x = "", y = "Interest over time", subtitle="Among All Categories in US, Normalized 0 to 100, Monthly", color = 'Keyword') +
+  ggtitle("Google Search Trend for Keywords from 2004 to 2023") +
+  labs(legend = 'Keyword', caption = "Source: Google | Visual by Michael Dunphy, @mtdunphy") +
+  scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+  theme_minimal() +
+  theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+p + facet_wrap(~keyword, scales = "free_y", ncol = 1)
+
+# combine with economic indicators
+combined <- final %>%
+  filter(date >= '2004-01-01') %>%
+  left_join(search_pivoted, by = c('date' = 'date'))
+
+# correlation matrix
+cor_matrix <- cor(combined %>% select(-date))
+chart.Correlation(cor_matrix)
+
+```
+
+```{r}
+
+train <- as_tsibble(combined) %>%
+    filter(date < '2017-01-01')
+
+test <- as_tsibble(combined)
+
+# testing with recession keyword
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - `inflation` + season() + trend()))
+
+check <- lm(consumer_sentiment ~ . - prices - `inflation`, data = train)
+summary(check)
+
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(combined) + 
+    labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators + Google Search Trend: 'Recession' among All Categories") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+    labs(caption = "Note: Google search trend is for keyword 'recession' among all categories in the US. Economic indicators used in estimating consumer 
+sentiment include unemployement rate,YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % 
+change in personal consumption, YOY % change in consumer price index, YOY % change in S&P 500 index, YOY % change in dollar 
+index, Avg 30-year mortgage rate, YOY % change in mortgage rate, YOY % change in median house price, and NBER recession indicator. 
+Training data is monthly from Jan 2004 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r}
+
+# testing with prices keyword
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - recession - `inflation` + season() + trend()))
+
+check <- lm(consumer_sentiment ~ . - recession - `inflation`, data = train)
+summary(check)
+
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(combined) + 
+    labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators + Google Search Trend: 'Prices' among All Categories") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+    labs(caption = "Note: Google search trend is for keyword 'prices' among all categories in the US. Economic indicators used in estimating consumer 
+sentiment include unemployement rate,YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % 
+change in personal consumption, YOY % change in consumer price index, YOY % change in S&P 500 index, YOY % change in dollar 
+index, Avg 30-year mortgage rate, YOY % change in mortgage rate, YOY % change in median house price, and NBER recession indicator. 
+Training data is monthly from Jan 2004 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r}
+
+# testing with inflation keyword
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - recession + season() + trend()))
+
+check <- lm(consumer_sentiment ~ . - prices - recession, data = train)
+summary(check)
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(combined) + 
+    labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators + Google Search Trend: 'Inflation' among All Categories") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+    labs(caption = "Note: Google search trend is for keyword 'inflation' among all categories in the US. Economic indicators used in estimating consumer 
+sentiment include unemployement rate,YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % 
+change in personal consumption, YOY % change in consumer price index, YOY % change in S&P 500 index, YOY % change in dollar 
+index, Avg 30-year mortgage rate, YOY % change in mortgage rate, YOY % change in median house price, and NBER recession indicator. 
+Training data is monthly from Jan 2004 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r warning=FALSE}
+
+search <- read.csv("GTrends Exported - News.csv") %>%
+    mutate(date = as.Date(date))
+
+search_pivoted <- search %>%
+  pivot_wider(names_from = keyword, values_from = hits) %>%
+  select(date, `inflation`, recession, prices)
+
+p <- ggplot() + 
+  geom_line(data = search, aes(x = date, y = hits, col = keyword)) +
+  labs(x = "", y = "Interest over time", subtitle="Among News Categories, Monthly, Normalized 0 to 100", color = 'Keyword') +
+  ggtitle("Google Search Trend for Keywords from 2004 to 2023") +
+  labs(legend = 'Keyword', caption = "Source: Google | Visual by Michael Dunphy, @mtdunphy") +
+  scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+  theme_minimal() +
+  theme(plot.caption = element_text(size = 7, hjust=0))
+
+p + facet_wrap(~keyword, scales = "free_y", ncol = 1)
+
+# combine with economic indicators
+combined <- final %>%
+  filter(date >= '2004-01-01') %>%
+  left_join(search_pivoted, by = c('date' = 'date'))
+
+# correlation matrix
+cor_matrix <- cor(combined %>% select(-date))
+chart.Correlation(cor_matrix)
+
+```
+```{r}
+train <- as_tsibble(combined) %>%
+    filter(date < '2017-01-01')
+
+test <- as_tsibble(combined)
+
+# testing with recession keyword
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - `inflation` + season() + trend()))
+
+check <- lm(consumer_sentiment ~ . - prices - `inflation`, data = train)
+summary(check)
+
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(combined) + 
+      labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators + Google Search Trend: 'Recession' among News Categories") +
+      ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+      labs(caption = "Note: Google search trend is for keyword 'recession' among all categories in the US. Economic indicators used in estimating consumer 
+sentiment include unemployement rate,YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % 
+change in personal consumption, YOY % change in consumer price index, YOY % change in S&P 500 index, YOY % change in dollar 
+index, Avg 30-year mortgage rate, YOY % change in mortgage rate, YOY % change in median house price, and NBER recession indicator. 
+Training data is monthly from Jan 2004 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r}
+
+# testing with prices keyword
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - recession - `inflation` + season() + trend()))
+
+check <- lm(consumer_sentiment ~ . - consumer_sentiment - recession - `inflation`, data = train)
+summary(check)
+
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(combined) + 
+      labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators + Google Search Trend: 'Prices' among News Categories") +
+      ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+      labs(caption = "Note: Google search trend is for keyword 'prices' among all categories in the US. Economic indicators used in estimating consumer 
+sentiment include unemployement rate,YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % 
+change in personal consumption, YOY % change in consumer price index, YOY % change in S&P 500 index, YOY % change in dollar 
+index, Avg 30-year mortgage rate, YOY % change in mortgage rate, YOY % change in median house price, and NBER recession indicator. 
+Training data is monthly from Jan 2004 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
+
+```{r}
+
+# testing with inflation keyword
+fit <- train %>% 
+    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - recession + season() + trend()))
+
+check <- lm(consumer_sentiment ~ . - consumer_sentiment - prices - recession, data = train)
+summary(check)
+checkresiduals(check)
+
+forecast_consumption <- forecast(fit, new_data = test)
+
+forecast_consumption %>% 
+  autoplot(combined) + 
+    labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators + Google Search Trend: 'Inflation' among News Categories") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 2004 to 2023") +
+    labs(caption = "Note: Google search trend is for keyword 'inflation' among all categories in the US. Economic indicators used in estimating consumer 
+sentiment include unemployement rate,YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % 
+change in personal consumption, YOY % change in consumer price index, YOY % change in S&P 500 index, YOY % change in dollar 
+index, Avg 30-year mortgage rate, YOY % change in mortgage rate, YOY % change in median house price, and NBER recession indicator. 
+Training data is monthly from Jan 2004 to Jan 2017.
+          
+Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual by Michael Dunphy, @mtdunphy") +
+          scale_x_date(date_breaks = '2 year', date_labels = "%Y") +
+          theme_bw() +
+          theme(plot.caption = element_text(size = 7, hjust=0), plot.subtitle = element_text(size = 10, hjust=0))
+
+```
