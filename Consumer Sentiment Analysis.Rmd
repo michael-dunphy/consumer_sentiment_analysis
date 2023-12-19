@@ -288,9 +288,9 @@ test <- as_tsibble(final) %>%
     filter(date >= '1978-01-01') 
 
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment + season() + trend()))
 
-check <- lm(consumer_sentiment ~ ., data = train)
+check <- lm(consumer_sentiment ~ . - date, data = train)
 summary(check)
 checkresiduals(check)
 
@@ -325,7 +325,7 @@ test <- as_tsibble(final) %>%
     filter(date >= start_date) 
 
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment + season() + trend()))
 
 forecast_consumption <- forecast(fit, new_data = test)
 
@@ -403,9 +403,9 @@ test <- as_tsibble(combined)
 
 # testing with recession keyword
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - `inflation` + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment - prices - `inflation` + season() + trend()))
 
-check <- lm(consumer_sentiment ~ . - prices - `inflation`, data = train)
+check <- lm(consumer_sentiment ~ . - date - prices - `inflation`, data = train)
 summary(check)
 
 checkresiduals(check)
@@ -433,9 +433,9 @@ Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual 
 
 # testing with prices keyword
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - recession - `inflation` + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment - recession - `inflation` + season() + trend()))
 
-check <- lm(consumer_sentiment ~ . - recession - `inflation`, data = train)
+check <- lm(consumer_sentiment ~ . - date - recession - `inflation`, data = train)
 summary(check)
 
 checkresiduals(check)
@@ -463,9 +463,9 @@ Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual 
 
 # testing with inflation keyword
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - recession + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment - prices - recession + season() + trend()))
 
-check <- lm(consumer_sentiment ~ . - prices - recession, data = train)
+check <- lm(consumer_sentiment ~ . - date - prices - recession, data = train)
 summary(check)
 checkresiduals(check)
 
@@ -526,9 +526,9 @@ test <- as_tsibble(combined)
 
 # testing with recession keyword
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - `inflation` + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment - prices - `inflation` + season() + trend()))
 
-check <- lm(consumer_sentiment ~ . - prices - `inflation`, data = train)
+check <- lm(consumer_sentiment ~ . - date - prices - `inflation`, data = train)
 summary(check)
 
 checkresiduals(check)
@@ -556,9 +556,9 @@ Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual 
 
 # testing with prices keyword
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - recession - `inflation` + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment - recession - `inflation` + season() + trend()))
 
-check <- lm(consumer_sentiment ~ . - consumer_sentiment - recession - `inflation`, data = train)
+check <- lm(consumer_sentiment ~ . - date - consumer_sentiment - recession - `inflation`, data = train)
 summary(check)
 
 checkresiduals(check)
@@ -586,9 +586,9 @@ Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance, Google | Visual 
 
 # testing with inflation keyword
 fit <- train %>% 
-    model(TSLM(consumer_sentiment ~ . - consumer_sentiment - prices - recession + season() + trend()))
+    model(TSLM(consumer_sentiment ~ . - date - consumer_sentiment - prices - recession + season() + trend()))
 
-check <- lm(consumer_sentiment ~ . - consumer_sentiment - prices - recession, data = train)
+check <- lm(consumer_sentiment ~ . - date - consumer_sentiment - prices - recession, data = train)
 summary(check)
 checkresiduals(check)
 
