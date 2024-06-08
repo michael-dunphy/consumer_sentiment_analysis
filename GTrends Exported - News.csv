@@ -1,1441 +1,1477 @@
-date,keyword,hits
-2004-01-01,recession,4
-2004-02-01,recession,4
-2004-03-01,recession,5
-2004-04-01,recession,6
-2004-05-01,recession,5
-2004-06-01,recession,3
-2004-07-01,recession,3
-2004-08-01,recession,4
-2004-09-01,recession,4
-2004-10-01,recession,7
-2004-11-01,recession,5
-2004-12-01,recession,4
-2005-01-01,recession,2
-2005-02-01,recession,3
-2005-03-01,recession,4
-2005-04-01,recession,4
-2005-05-01,recession,3
-2005-06-01,recession,3
-2005-07-01,recession,2
-2005-08-01,recession,3
-2005-09-01,recession,6
-2005-10-01,recession,4
-2005-11-01,recession,4
-2005-12-01,recession,4
-2006-01-01,recession,5
-2006-02-01,recession,4
-2006-03-01,recession,4
-2006-04-01,recession,4
-2006-05-01,recession,5
-2006-06-01,recession,4
-2006-07-01,recession,4
-2006-08-01,recession,6
-2006-09-01,recession,5
-2006-10-01,recession,4
-2006-11-01,recession,5
-2006-12-01,recession,4
-2007-01-01,recession,3
-2007-02-01,recession,8
-2007-03-01,recession,7
-2007-04-01,recession,5
-2007-05-01,recession,5
-2007-06-01,recession,3
-2007-07-01,recession,2
-2007-08-01,recession,8
-2007-09-01,recession,14
-2007-10-01,recession,11
-2007-11-01,recession,19
-2007-12-01,recession,16
-2008-01-01,recession,74
-2008-02-01,recession,34
-2008-03-01,recession,42
-2008-04-01,recession,37
-2008-05-01,recession,22
-2008-06-01,recession,16
-2008-07-01,recession,16
-2008-08-01,recession,10
-2008-09-01,recession,25
-2008-10-01,recession,57
-2008-11-01,recession,41
-2008-12-01,recession,55
-2009-01-01,recession,36
-2009-02-01,recession,53
-2009-03-01,recession,45
-2009-04-01,recession,33
-2009-05-01,recession,25
-2009-06-01,recession,18
-2009-07-01,recession,20
-2009-08-01,recession,19
-2009-09-01,recession,22
-2009-10-01,recession,22
-2009-11-01,recession,22
-2009-12-01,recession,18
-2010-01-01,recession,15
-2010-02-01,recession,15
-2010-03-01,recession,15
-2010-04-01,recession,16
-2010-05-01,recession,13
-2010-06-01,recession,11
-2010-07-01,recession,12
-2010-08-01,recession,13
-2010-09-01,recession,17
-2010-10-01,recession,13
-2010-11-01,recession,13
-2010-12-01,recession,11
-2011-01-01,recession,9
-2011-02-01,recession,10
-2011-03-01,recession,11
-2011-04-01,recession,11
-2011-05-01,recession,10
-2011-06-01,recession,11
-2011-07-01,recession,9
-2011-08-01,recession,22
-2011-09-01,recession,15
-2011-10-01,recession,14
-2011-11-01,recession,12
-2011-12-01,recession,9
-2012-01-01,recession,8
-2012-02-01,recession,8
-2012-03-01,recession,8
-2012-04-01,recession,10
-2012-05-01,recession,9
-2012-06-01,recession,6
-2012-07-01,recession,7
-2012-08-01,recession,7
-2012-09-01,recession,8
-2012-10-01,recession,10
-2012-11-01,recession,11
-2012-12-01,recession,7
-2013-01-01,recession,6
-2013-02-01,recession,7
-2013-03-01,recession,6
-2013-04-01,recession,7
-2013-05-01,recession,6
-2013-06-01,recession,4
-2013-07-01,recession,4
-2013-08-01,recession,4
-2013-09-01,recession,6
-2013-10-01,recession,7
-2013-11-01,recession,6
-2013-12-01,recession,5
-2014-01-01,recession,4
-2014-02-01,recession,5
-2014-03-01,recession,5
-2014-04-01,recession,7
-2014-05-01,recession,6
-2014-06-01,recession,5
-2014-07-01,recession,4
-2014-08-01,recession,4
-2014-09-01,recession,5
-2014-10-01,recession,6
-2014-11-01,recession,7
-2014-12-01,recession,6
-2015-01-01,recession,5
-2015-02-01,recession,6
-2015-03-01,recession,6
-2015-04-01,recession,7
-2015-05-01,recession,6
-2015-06-01,recession,4
-2015-07-01,recession,5
-2015-08-01,recession,7
-2015-09-01,recession,8
-2015-10-01,recession,7
-2015-11-01,recession,7
-2015-12-01,recession,7
-2016-01-01,recession,10
-2016-02-01,recession,11
-2016-03-01,recession,8
-2016-04-01,recession,10
-2016-05-01,recession,8
-2016-06-01,recession,7
-2016-07-01,recession,5
-2016-08-01,recession,5
-2016-09-01,recession,7
-2016-10-01,recession,8
-2016-11-01,recession,10
-2016-12-01,recession,6
-2017-01-01,recession,6
-2017-02-01,recession,7
-2017-03-01,recession,7
-2017-04-01,recession,7
-2017-05-01,recession,7
-2017-06-01,recession,5
-2017-07-01,recession,4
-2017-08-01,recession,4
-2017-09-01,recession,5
-2017-10-01,recession,6
-2017-11-01,recession,6
-2017-12-01,recession,7
-2018-01-01,recession,6
-2018-02-01,recession,9
-2018-03-01,recession,7
-2018-04-01,recession,8
-2018-05-01,recession,8
-2018-06-01,recession,9
-2018-07-01,recession,8
-2018-08-01,recession,8
-2018-09-01,recession,10
-2018-10-01,recession,13
-2018-11-01,recession,11
-2018-12-01,recession,19
-2019-01-01,recession,12
-2019-02-01,recession,11
-2019-03-01,recession,14
-2019-04-01,recession,12
-2019-05-01,recession,11
-2019-06-01,recession,11
-2019-07-01,recession,12
-2019-08-01,recession,54
-2019-09-01,recession,20
-2019-10-01,recession,16
-2019-11-01,recession,12
-2019-12-01,recession,11
-2020-01-01,recession,10
-2020-02-01,recession,15
-2020-03-01,recession,78
-2020-04-01,recession,36
-2020-05-01,recession,17
-2020-06-01,recession,15
-2020-07-01,recession,9
-2020-08-01,recession,10
-2020-09-01,recession,9
-2020-10-01,recession,8
-2020-11-01,recession,8
-2020-12-01,recession,6
-2021-01-01,recession,6
-2021-02-01,recession,6
-2021-03-01,recession,6
-2021-04-01,recession,6
-2021-05-01,recession,6
-2021-06-01,recession,4
-2021-07-01,recession,4
-2021-08-01,recession,3
-2021-09-01,recession,5
-2021-10-01,recession,6
-2021-11-01,recession,6
-2021-12-01,recession,5
-2022-01-01,recession,7
-2022-02-01,recession,10
-2022-03-01,recession,21
-2022-04-01,recession,37
-2022-05-01,recession,52
-2022-06-01,recession,100
-2022-07-01,recession,84
-2022-08-01,recession,35
-2022-09-01,recession,30
-2022-10-01,recession,39
-2022-11-01,recession,31
-2022-12-01,recession,26
-2023-01-01,recession,28
-2023-02-01,recession,19
-2023-03-01,recession,26
-2023-04-01,recession,22
-2023-05-01,recession,25
-2023-06-01,recession,15
-2023-07-01,recession,13
-2023-08-01,recession,15
-2023-09-01,recession,13
-2023-10-01,recession,14
-2023-11-01,recession,13
-2023-12-01,recession,13
-2004-01-01,prices,40
-2004-02-01,prices,39
-2004-03-01,prices,45
-2004-04-01,prices,47
-2004-05-01,prices,42
-2004-06-01,prices,29
-2004-07-01,prices,30
-2004-08-01,prices,28
-2004-09-01,prices,30
-2004-10-01,prices,40
-2004-11-01,prices,37
-2004-12-01,prices,30
-2005-01-01,prices,31
-2005-02-01,prices,39
-2005-03-01,prices,43
-2005-04-01,prices,48
-2005-05-01,prices,29
-2005-06-01,prices,29
-2005-07-01,prices,30
-2005-08-01,prices,38
-2005-09-01,prices,55
-2005-10-01,prices,36
-2005-11-01,prices,33
-2005-12-01,prices,27
-2006-01-01,prices,31
-2006-02-01,prices,36
-2006-03-01,prices,35
-2006-04-01,prices,45
-2006-05-01,prices,38
-2006-06-01,prices,27
-2006-07-01,prices,31
-2006-08-01,prices,29
-2006-09-01,prices,38
-2006-10-01,prices,33
-2006-11-01,prices,27
-2006-12-01,prices,26
-2007-01-01,prices,27
-2007-02-01,prices,36
-2007-03-01,prices,36
-2007-04-01,prices,37
-2007-05-01,prices,36
-2007-06-01,prices,26
-2007-07-01,prices,25
-2007-08-01,prices,27
-2007-09-01,prices,26
-2007-10-01,prices,29
-2007-11-01,prices,35
-2007-12-01,prices,31
-2008-01-01,prices,34
-2008-02-01,prices,34
-2008-03-01,prices,50
-2008-04-01,prices,51
-2008-05-01,prices,51
-2008-06-01,prices,47
-2008-07-01,prices,47
-2008-08-01,prices,35
-2008-09-01,prices,76
-2008-10-01,prices,100
-2008-11-01,prices,66
-2008-12-01,prices,48
-2009-01-01,prices,41
-2009-02-01,prices,45
-2009-03-01,prices,46
-2009-04-01,prices,40
-2009-05-01,prices,35
-2009-06-01,prices,29
-2009-07-01,prices,29
-2009-08-01,prices,26
-2009-09-01,prices,28
-2009-10-01,prices,30
-2009-11-01,prices,29
-2009-12-01,prices,25
-2010-01-01,prices,26
-2010-02-01,prices,29
-2010-03-01,prices,31
-2010-04-01,prices,32
-2010-05-01,prices,29
-2010-06-01,prices,21
-2010-07-01,prices,21
-2010-08-01,prices,19
-2010-09-01,prices,21
-2010-10-01,prices,21
-2010-11-01,prices,25
-2010-12-01,prices,24
-2011-01-01,prices,30
-2011-02-01,prices,38
-2011-03-01,prices,45
-2011-04-01,prices,45
-2011-05-01,prices,37
-2011-06-01,prices,28
-2011-07-01,prices,26
-2011-08-01,prices,38
-2011-09-01,prices,29
-2011-10-01,prices,30
-2011-11-01,prices,26
-2011-12-01,prices,23
-2012-01-01,prices,27
-2012-02-01,prices,37
-2012-03-01,prices,40
-2012-04-01,prices,33
-2012-05-01,prices,27
-2012-06-01,prices,26
-2012-07-01,prices,24
-2012-08-01,prices,25
-2012-09-01,prices,29
-2012-10-01,prices,36
-2012-11-01,prices,32
-2012-12-01,prices,21
-2013-01-01,prices,25
-2013-02-01,prices,28
-2013-03-01,prices,28
-2013-04-01,prices,30
-2013-05-01,prices,27
-2013-06-01,prices,24
-2013-07-01,prices,25
-2013-08-01,prices,22
-2013-09-01,prices,23
-2013-10-01,prices,26
-2013-11-01,prices,23
-2013-12-01,prices,21
-2014-01-01,prices,24
-2014-02-01,prices,27
-2014-03-01,prices,27
-2014-04-01,prices,27
-2014-05-01,prices,24
-2014-06-01,prices,21
-2014-07-01,prices,22
-2014-08-01,prices,20
-2014-09-01,prices,21
-2014-10-01,prices,29
-2014-11-01,prices,27
-2014-12-01,prices,38
-2015-01-01,prices,40
-2015-02-01,prices,37
-2015-03-01,prices,32
-2015-04-01,prices,32
-2015-05-01,prices,27
-2015-06-01,prices,26
-2015-07-01,prices,32
-2015-08-01,prices,38
-2015-09-01,prices,32
-2015-10-01,prices,30
-2015-11-01,prices,27
-2015-12-01,prices,32
-2016-01-01,prices,41
-2016-02-01,prices,41
-2016-03-01,prices,35
-2016-04-01,prices,33
-2016-05-01,prices,32
-2016-06-01,prices,35
-2016-07-01,prices,32
-2016-08-01,prices,25
-2016-09-01,prices,26
-2016-10-01,prices,27
-2016-11-01,prices,33
-2016-12-01,prices,29
-2017-01-01,prices,27
-2017-02-01,prices,26
-2017-03-01,prices,31
-2017-04-01,prices,28
-2017-05-01,prices,27
-2017-06-01,prices,29
-2017-07-01,prices,26
-2017-08-01,prices,26
-2017-09-01,prices,24
-2017-10-01,prices,25
-2017-11-01,prices,27
-2017-12-01,prices,26
-2018-01-01,prices,29
-2018-02-01,prices,36
-2018-03-01,prices,29
-2018-04-01,prices,29
-2018-05-01,prices,28
-2018-06-01,prices,26
-2018-07-01,prices,27
-2018-08-01,prices,22
-2018-09-01,prices,25
-2018-10-01,prices,28
-2018-11-01,prices,29
-2018-12-01,prices,28
-2019-01-01,prices,26
-2019-02-01,prices,25
-2019-03-01,prices,24
-2019-04-01,prices,26
-2019-05-01,prices,26
-2019-06-01,prices,24
-2019-07-01,prices,22
-2019-08-01,prices,26
-2019-09-01,prices,27
-2019-10-01,prices,23
-2019-11-01,prices,21
-2019-12-01,prices,21
-2020-01-01,prices,24
-2020-02-01,prices,30
-2020-03-01,prices,80
-2020-04-01,prices,70
-2020-05-01,prices,33
-2020-06-01,prices,31
-2020-07-01,prices,29
-2020-08-01,prices,29
-2020-09-01,prices,24
-2020-10-01,prices,28
-2020-11-01,prices,36
-2020-12-01,prices,25
-2021-01-01,prices,32
-2021-02-01,prices,37
-2021-03-01,prices,32
-2021-04-01,prices,30
-2021-05-01,prices,32
-2021-06-01,prices,29
-2021-07-01,prices,26
-2021-08-01,prices,24
-2021-09-01,prices,24
-2021-10-01,prices,29
-2021-11-01,prices,29
-2021-12-01,prices,27
-2022-01-01,prices,27
-2022-02-01,prices,39
-2022-03-01,prices,87
-2022-04-01,prices,36
-2022-05-01,prices,46
-2022-06-01,prices,58
-2022-07-01,prices,40
-2022-08-01,prices,32
-2022-09-01,prices,31
-2022-10-01,prices,32
-2022-11-01,prices,30
-2022-12-01,prices,27
-2023-01-01,prices,25
-2023-02-01,prices,27
-2023-03-01,prices,26
-2023-04-01,prices,25
-2023-05-01,prices,24
-2023-06-01,prices,23
-2023-07-01,prices,24
-2023-08-01,prices,24
-2023-09-01,prices,25
-2023-10-01,prices,25
-2023-11-01,prices,23
-2023-12-01,prices,24
-2004-01-01,inflation,23
-2004-02-01,inflation,25
-2004-03-01,inflation,29
-2004-04-01,inflation,38
-2004-05-01,inflation,28
-2004-06-01,inflation,28
-2004-07-01,inflation,21
-2004-08-01,inflation,20
-2004-09-01,inflation,27
-2004-10-01,inflation,27
-2004-11-01,inflation,33
-2004-12-01,inflation,29
-2005-01-01,inflation,23
-2005-02-01,inflation,31
-2005-03-01,inflation,31
-2005-04-01,inflation,36
-2005-05-01,inflation,26
-2005-06-01,inflation,22
-2005-07-01,inflation,18
-2005-08-01,inflation,21
-2005-09-01,inflation,25
-2005-10-01,inflation,33
-2005-11-01,inflation,26
-2005-12-01,inflation,22
-2006-01-01,inflation,23
-2006-02-01,inflation,25
-2006-03-01,inflation,26
-2006-04-01,inflation,29
-2006-05-01,inflation,31
-2006-06-01,inflation,26
-2006-07-01,inflation,21
-2006-08-01,inflation,19
-2006-09-01,inflation,22
-2006-10-01,inflation,24
-2006-11-01,inflation,25
-2006-12-01,inflation,21
-2007-01-01,inflation,19
-2007-02-01,inflation,26
-2007-03-01,inflation,22
-2007-04-01,inflation,24
-2007-05-01,inflation,21
-2007-06-01,inflation,19
-2007-07-01,inflation,16
-2007-08-01,inflation,19
-2007-09-01,inflation,22
-2007-10-01,inflation,25
-2007-11-01,inflation,27
-2007-12-01,inflation,24
-2008-01-01,inflation,30
-2008-02-01,inflation,31
-2008-03-01,inflation,34
-2008-04-01,inflation,34
-2008-05-01,inflation,28
-2008-06-01,inflation,30
-2008-07-01,inflation,28
-2008-08-01,inflation,23
-2008-09-01,inflation,27
-2008-10-01,inflation,34
-2008-11-01,inflation,27
-2008-12-01,inflation,24
-2009-01-01,inflation,23
-2009-02-01,inflation,27
-2009-03-01,inflation,30
-2009-04-01,inflation,23
-2009-05-01,inflation,21
-2009-06-01,inflation,20
-2009-07-01,inflation,15
-2009-08-01,inflation,16
-2009-09-01,inflation,18
-2009-10-01,inflation,21
-2009-11-01,inflation,21
-2009-12-01,inflation,20
-2010-01-01,inflation,16
-2010-02-01,inflation,20
-2010-03-01,inflation,19
-2010-04-01,inflation,19
-2010-05-01,inflation,18
-2010-06-01,inflation,12
-2010-07-01,inflation,11
-2010-08-01,inflation,12
-2010-09-01,inflation,13
-2010-10-01,inflation,20
-2010-11-01,inflation,24
-2010-12-01,inflation,16
-2011-01-01,inflation,18
-2011-02-01,inflation,24
-2011-03-01,inflation,20
-2011-04-01,inflation,27
-2011-05-01,inflation,18
-2011-06-01,inflation,13
-2011-07-01,inflation,13
-2011-08-01,inflation,15
-2011-09-01,inflation,15
-2011-10-01,inflation,16
-2011-11-01,inflation,16
-2011-12-01,inflation,14
-2012-01-01,inflation,13
-2012-02-01,inflation,15
-2012-03-01,inflation,14
-2012-04-01,inflation,16
-2012-05-01,inflation,14
-2012-06-01,inflation,10
-2012-07-01,inflation,9
-2012-08-01,inflation,10
-2012-09-01,inflation,17
-2012-10-01,inflation,16
-2012-11-01,inflation,15
-2012-12-01,inflation,13
-2013-01-01,inflation,13
-2013-02-01,inflation,17
-2013-03-01,inflation,15
-2013-04-01,inflation,16
-2013-05-01,inflation,13
-2013-06-01,inflation,10
-2013-07-01,inflation,9
-2013-08-01,inflation,9
-2013-09-01,inflation,12
-2013-10-01,inflation,16
-2013-11-01,inflation,16
-2013-12-01,inflation,14
-2014-01-01,inflation,13
-2014-02-01,inflation,15
-2014-03-01,inflation,15
-2014-04-01,inflation,16
-2014-05-01,inflation,16
-2014-06-01,inflation,12
-2014-07-01,inflation,10
-2014-08-01,inflation,9
-2014-09-01,inflation,14
-2014-10-01,inflation,16
-2014-11-01,inflation,14
-2014-12-01,inflation,14
-2015-01-01,inflation,14
-2015-02-01,inflation,16
-2015-03-01,inflation,16
-2015-04-01,inflation,18
-2015-05-01,inflation,16
-2015-06-01,inflation,10
-2015-07-01,inflation,11
-2015-08-01,inflation,11
-2015-09-01,inflation,17
-2015-10-01,inflation,16
-2015-11-01,inflation,16
-2015-12-01,inflation,16
-2016-01-01,inflation,13
-2016-02-01,inflation,17
-2016-03-01,inflation,16
-2016-04-01,inflation,17
-2016-05-01,inflation,15
-2016-06-01,inflation,10
-2016-07-01,inflation,10
-2016-08-01,inflation,10
-2016-09-01,inflation,13
-2016-10-01,inflation,15
-2016-11-01,inflation,17
-2016-12-01,inflation,16
-2017-01-01,inflation,15
-2017-02-01,inflation,16
-2017-03-01,inflation,17
-2017-04-01,inflation,16
-2017-05-01,inflation,15
-2017-06-01,inflation,10
-2017-07-01,inflation,10
-2017-08-01,inflation,10
-2017-09-01,inflation,14
-2017-10-01,inflation,16
-2017-11-01,inflation,15
-2017-12-01,inflation,15
-2018-01-01,inflation,15
-2018-02-01,inflation,24
-2018-03-01,inflation,16
-2018-04-01,inflation,18
-2018-05-01,inflation,15
-2018-06-01,inflation,11
-2018-07-01,inflation,11
-2018-08-01,inflation,12
-2018-09-01,inflation,15
-2018-10-01,inflation,19
-2018-11-01,inflation,16
-2018-12-01,inflation,15
-2019-01-01,inflation,14
-2019-02-01,inflation,15
-2019-03-01,inflation,16
-2019-04-01,inflation,17
-2019-05-01,inflation,15
-2019-06-01,inflation,11
-2019-07-01,inflation,11
-2019-08-01,inflation,11
-2019-09-01,inflation,13
-2019-10-01,inflation,14
-2019-11-01,inflation,13
-2019-12-01,inflation,14
-2020-01-01,inflation,13
-2020-02-01,inflation,15
-2020-03-01,inflation,16
-2020-04-01,inflation,19
-2020-05-01,inflation,17
-2020-06-01,inflation,12
-2020-07-01,inflation,13
-2020-08-01,inflation,16
-2020-09-01,inflation,16
-2020-10-01,inflation,13
-2020-11-01,inflation,14
-2020-12-01,inflation,15
-2021-01-01,inflation,18
-2021-02-01,inflation,24
-2021-03-01,inflation,26
-2021-04-01,inflation,23
-2021-05-01,inflation,54
-2021-06-01,inflation,38
-2021-07-01,inflation,28
-2021-08-01,inflation,20
-2021-09-01,inflation,24
-2021-10-01,inflation,36
-2021-11-01,inflation,54
-2021-12-01,inflation,41
-2022-01-01,inflation,51
-2022-02-01,inflation,58
-2022-03-01,inflation,61
-2022-04-01,inflation,64
-2022-05-01,inflation,76
-2022-06-01,inflation,100
-2022-07-01,inflation,81
-2022-08-01,inflation,87
-2022-09-01,inflation,81
-2022-10-01,inflation,90
-2022-11-01,inflation,65
-2022-12-01,inflation,48
-2023-01-01,inflation,45
-2023-02-01,inflation,49
-2023-03-01,inflation,44
-2023-04-01,inflation,40
-2023-05-01,inflation,34
-2023-06-01,inflation,28
-2023-07-01,inflation,32
-2023-08-01,inflation,33
-2023-09-01,inflation,35
-2023-10-01,inflation,30
-2023-11-01,inflation,35
-2023-12-01,inflation,39
-2004-01-01,layoff,11
-2004-02-01,layoff,11
-2004-03-01,layoff,13
-2004-04-01,layoff,13
-2004-05-01,layoff,10
-2004-06-01,layoff,11
-2004-07-01,layoff,15
-2004-08-01,layoff,5
-2004-09-01,layoff,11
-2004-10-01,layoff,10
-2004-11-01,layoff,11
-2004-12-01,layoff,9
-2005-01-01,layoff,10
-2005-02-01,layoff,10
-2005-03-01,layoff,9
-2005-04-01,layoff,10
-2005-05-01,layoff,12
-2005-06-01,layoff,13
-2005-07-01,layoff,16
-2005-08-01,layoff,7
-2005-09-01,layoff,7
-2005-10-01,layoff,11
-2005-11-01,layoff,10
-2005-12-01,layoff,7
-2006-01-01,layoff,8
-2006-02-01,layoff,7
-2006-03-01,layoff,7
-2006-04-01,layoff,7
-2006-05-01,layoff,8
-2006-06-01,layoff,11
-2006-07-01,layoff,12
-2006-08-01,layoff,11
-2006-09-01,layoff,15
-2006-10-01,layoff,8
-2006-11-01,layoff,6
-2006-12-01,layoff,8
-2007-01-01,layoff,9
-2007-02-01,layoff,10
-2007-03-01,layoff,9
-2007-04-01,layoff,9
-2007-05-01,layoff,17
-2007-06-01,layoff,10
-2007-07-01,layoff,7
-2007-08-01,layoff,10
-2007-09-01,layoff,10
-2007-10-01,layoff,15
-2007-11-01,layoff,12
-2007-12-01,layoff,8
-2008-01-01,layoff,18
-2008-02-01,layoff,13
-2008-03-01,layoff,13
-2008-04-01,layoff,19
-2008-05-01,layoff,15
-2008-06-01,layoff,15
-2008-07-01,layoff,14
-2008-08-01,layoff,14
-2008-09-01,layoff,19
-2008-10-01,layoff,39
-2008-11-01,layoff,55
-2008-12-01,layoff,58
-2009-01-01,layoff,100
-2009-02-01,layoff,70
-2009-03-01,layoff,59
-2009-04-01,layoff,36
-2009-05-01,layoff,28
-2009-06-01,layoff,21
-2009-07-01,layoff,18
-2009-08-01,layoff,15
-2009-09-01,layoff,13
-2009-10-01,layoff,14
-2009-11-01,layoff,14
-2009-12-01,layoff,9
-2010-01-01,layoff,13
-2010-02-01,layoff,13
-2010-03-01,layoff,13
-2010-04-01,layoff,9
-2010-05-01,layoff,10
-2010-06-01,layoff,11
-2010-07-01,layoff,9
-2010-08-01,layoff,8
-2010-09-01,layoff,7
-2010-10-01,layoff,8
-2010-11-01,layoff,8
-2010-12-01,layoff,7
-2011-01-01,layoff,8
-2011-02-01,layoff,9
-2011-03-01,layoff,9
-2011-04-01,layoff,8
-2011-05-01,layoff,8
-2011-06-01,layoff,10
-2011-07-01,layoff,10
-2011-08-01,layoff,10
-2011-09-01,layoff,10
-2011-10-01,layoff,9
-2011-11-01,layoff,8
-2011-12-01,layoff,6
-2012-01-01,layoff,8
-2012-02-01,layoff,9
-2012-03-01,layoff,7
-2012-04-01,layoff,7
-2012-05-01,layoff,9
-2012-06-01,layoff,8
-2012-07-01,layoff,7
-2012-08-01,layoff,7
-2012-09-01,layoff,7
-2012-10-01,layoff,10
-2012-11-01,layoff,12
-2012-12-01,layoff,6
-2013-01-01,layoff,7
-2013-02-01,layoff,8
-2013-03-01,layoff,6
-2013-04-01,layoff,7
-2013-05-01,layoff,7
-2013-06-01,layoff,9
-2013-07-01,layoff,5
-2013-08-01,layoff,7
-2013-09-01,layoff,8
-2013-10-01,layoff,10
-2013-11-01,layoff,6
-2013-12-01,layoff,5
-2014-01-01,layoff,9
-2014-02-01,layoff,10
-2014-03-01,layoff,7
-2014-04-01,layoff,6
-2014-05-01,layoff,6
-2014-06-01,layoff,6
-2014-07-01,layoff,11
-2014-08-01,layoff,7
-2014-09-01,layoff,7
-2014-10-01,layoff,7
-2014-11-01,layoff,5
-2014-12-01,layoff,8
-2015-01-01,layoff,14
-2015-02-01,layoff,12
-2015-03-01,layoff,11
-2015-04-01,layoff,10
-2015-05-01,layoff,9
-2015-06-01,layoff,12
-2015-07-01,layoff,21
-2015-08-01,layoff,15
-2015-09-01,layoff,22
-2015-10-01,layoff,17
-2015-11-01,layoff,12
-2015-12-01,layoff,9
-2016-01-01,layoff,15
-2016-02-01,layoff,17
-2016-03-01,layoff,15
-2016-04-01,layoff,19
-2016-05-01,layoff,16
-2016-06-01,layoff,12
-2016-07-01,layoff,10
-2016-08-01,layoff,12
-2016-09-01,layoff,11
-2016-10-01,layoff,10
-2016-11-01,layoff,10
-2016-12-01,layoff,8
-2017-01-01,layoff,13
-2017-02-01,layoff,11
-2017-03-01,layoff,11
-2017-04-01,layoff,16
-2017-05-01,layoff,11
-2017-06-01,layoff,11
-2017-07-01,layoff,12
-2017-08-01,layoff,10
-2017-09-01,layoff,10
-2017-10-01,layoff,11
-2017-11-01,layoff,11
-2017-12-01,layoff,9
-2018-01-01,layoff,14
-2018-02-01,layoff,15
-2018-03-01,layoff,15
-2018-04-01,layoff,16
-2018-05-01,layoff,10
-2018-06-01,layoff,11
-2018-07-01,layoff,10
-2018-08-01,layoff,10
-2018-09-01,layoff,11
-2018-10-01,layoff,12
-2018-11-01,layoff,12
-2018-12-01,layoff,11
-2019-01-01,layoff,17
-2019-02-01,layoff,15
-2019-03-01,layoff,13
-2019-04-01,layoff,11
-2019-05-01,layoff,12
-2019-06-01,layoff,11
-2019-07-01,layoff,12
-2019-08-01,layoff,13
-2019-09-01,layoff,12
-2019-10-01,layoff,14
-2019-11-01,layoff,12
-2019-12-01,layoff,10
-2020-01-01,layoff,14
-2020-02-01,layoff,13
-2020-03-01,layoff,50
-2020-04-01,layoff,50
-2020-05-01,layoff,31
-2020-06-01,layoff,25
-2020-07-01,layoff,21
-2020-08-01,layoff,18
-2020-09-01,layoff,16
-2020-10-01,layoff,16
-2020-11-01,layoff,11
-2020-12-01,layoff,9
-2021-01-01,layoff,9
-2021-02-01,layoff,10
-2021-03-01,layoff,7
-2021-04-01,layoff,8
-2021-05-01,layoff,7
-2021-06-01,layoff,7
-2021-07-01,layoff,6
-2021-08-01,layoff,7
-2021-09-01,layoff,6
-2021-10-01,layoff,6
-2021-11-01,layoff,6
-2021-12-01,layoff,10
-2022-01-01,layoff,7
-2022-02-01,layoff,7
-2022-03-01,layoff,6
-2022-04-01,layoff,7
-2022-05-01,layoff,11
-2022-06-01,layoff,15
-2022-07-01,layoff,13
-2022-08-01,layoff,15
-2022-09-01,layoff,12
-2022-10-01,layoff,16
-2022-11-01,layoff,45
-2022-12-01,layoff,17
-2023-01-01,layoff,38
-2023-02-01,layoff,28
-2023-03-01,layoff,26
-2023-04-01,layoff,26
-2023-05-01,layoff,21
-2023-06-01,layoff,16
-2023-07-01,layoff,15
-2023-08-01,layoff,19
-2023-09-01,layoff,17
-2023-10-01,layoff,24
-2023-11-01,layoff,19
-2023-12-01,layoff,16
-2004-01-01,interest rates,15
-2004-02-01,interest rates,15
-2004-03-01,interest rates,15
-2004-04-01,interest rates,28
-2004-05-01,interest rates,27
-2004-06-01,interest rates,28
-2004-07-01,interest rates,18
-2004-08-01,interest rates,15
-2004-09-01,interest rates,19
-2004-10-01,interest rates,14
-2004-11-01,interest rates,26
-2004-12-01,interest rates,19
-2005-01-01,interest rates,14
-2005-02-01,interest rates,21
-2005-03-01,interest rates,26
-2005-04-01,interest rates,23
-2005-05-01,interest rates,22
-2005-06-01,interest rates,20
-2005-07-01,interest rates,13
-2005-08-01,interest rates,18
-2005-09-01,interest rates,22
-2005-10-01,interest rates,15
-2005-11-01,interest rates,17
-2005-12-01,interest rates,17
-2006-01-01,interest rates,18
-2006-02-01,interest rates,17
-2006-03-01,interest rates,20
-2006-04-01,interest rates,17
-2006-05-01,interest rates,21
-2006-06-01,interest rates,22
-2006-07-01,interest rates,18
-2006-08-01,interest rates,16
-2006-09-01,interest rates,17
-2006-10-01,interest rates,14
-2006-11-01,interest rates,14
-2006-12-01,interest rates,14
-2007-01-01,interest rates,15
-2007-02-01,interest rates,17
-2007-03-01,interest rates,20
-2007-04-01,interest rates,17
-2007-05-01,interest rates,14
-2007-06-01,interest rates,17
-2007-07-01,interest rates,12
-2007-08-01,interest rates,19
-2007-09-01,interest rates,33
-2007-10-01,interest rates,22
-2007-11-01,interest rates,19
-2007-12-01,interest rates,19
-2008-01-01,interest rates,47
-2008-02-01,interest rates,30
-2008-03-01,interest rates,36
-2008-04-01,interest rates,21
-2008-05-01,interest rates,15
-2008-06-01,interest rates,16
-2008-07-01,interest rates,12
-2008-08-01,interest rates,10
-2008-09-01,interest rates,20
-2008-10-01,interest rates,27
-2008-11-01,interest rates,16
-2008-12-01,interest rates,28
-2009-01-01,interest rates,19
-2009-02-01,interest rates,21
-2009-03-01,interest rates,18
-2009-04-01,interest rates,13
-2009-05-01,interest rates,11
-2009-06-01,interest rates,19
-2009-07-01,interest rates,10
-2009-08-01,interest rates,11
-2009-09-01,interest rates,10
-2009-10-01,interest rates,11
-2009-11-01,interest rates,11
-2009-12-01,interest rates,12
-2010-01-01,interest rates,11
-2010-02-01,interest rates,12
-2010-03-01,interest rates,12
-2010-04-01,interest rates,14
-2010-05-01,interest rates,10
-2010-06-01,interest rates,9
-2010-07-01,interest rates,9
-2010-08-01,interest rates,9
-2010-09-01,interest rates,9
-2010-10-01,interest rates,11
-2010-11-01,interest rates,13
-2010-12-01,interest rates,13
-2011-01-01,interest rates,10
-2011-02-01,interest rates,12
-2011-03-01,interest rates,10
-2011-04-01,interest rates,14
-2011-05-01,interest rates,9
-2011-06-01,interest rates,9
-2011-07-01,interest rates,9
-2011-08-01,interest rates,14
-2011-09-01,interest rates,10
-2011-10-01,interest rates,9
-2011-11-01,interest rates,8
-2011-12-01,interest rates,8
-2012-01-01,interest rates,9
-2012-02-01,interest rates,9
-2012-03-01,interest rates,9
-2012-04-01,interest rates,9
-2012-05-01,interest rates,8
-2012-06-01,interest rates,9
-2012-07-01,interest rates,7
-2012-08-01,interest rates,7
-2012-09-01,interest rates,11
-2012-10-01,interest rates,9
-2012-11-01,interest rates,8
-2012-12-01,interest rates,9
-2013-01-01,interest rates,7
-2013-02-01,interest rates,10
-2013-03-01,interest rates,8
-2013-04-01,interest rates,9
-2013-05-01,interest rates,11
-2013-06-01,interest rates,19
-2013-07-01,interest rates,13
-2013-08-01,interest rates,11
-2013-09-01,interest rates,13
-2013-10-01,interest rates,10
-2013-11-01,interest rates,10
-2013-12-01,interest rates,10
-2014-01-01,interest rates,8
-2014-02-01,interest rates,8
-2014-03-01,interest rates,8
-2014-04-01,interest rates,9
-2014-05-01,interest rates,9
-2014-06-01,interest rates,8
-2014-07-01,interest rates,7
-2014-08-01,interest rates,7
-2014-09-01,interest rates,10
-2014-10-01,interest rates,9
-2014-11-01,interest rates,9
-2014-12-01,interest rates,10
-2015-01-01,interest rates,11
-2015-02-01,interest rates,12
-2015-03-01,interest rates,19
-2015-04-01,interest rates,13
-2015-05-01,interest rates,12
-2015-06-01,interest rates,15
-2015-07-01,interest rates,13
-2015-08-01,interest rates,18
-2015-09-01,interest rates,42
-2015-10-01,interest rates,14
-2015-11-01,interest rates,18
-2015-12-01,interest rates,46
-2016-01-01,interest rates,17
-2016-02-01,interest rates,35
-2016-03-01,interest rates,13
-2016-04-01,interest rates,13
-2016-05-01,interest rates,12
-2016-06-01,interest rates,12
-2016-07-01,interest rates,9
-2016-08-01,interest rates,11
-2016-09-01,interest rates,18
-2016-10-01,interest rates,12
-2016-11-01,interest rates,21
-2016-12-01,interest rates,30
-2017-01-01,interest rates,10
-2017-02-01,interest rates,11
-2017-03-01,interest rates,27
-2017-04-01,interest rates,11
-2017-05-01,interest rates,10
-2017-06-01,interest rates,14
-2017-07-01,interest rates,7
-2017-08-01,interest rates,6
-2017-09-01,interest rates,8
-2017-10-01,interest rates,9
-2017-11-01,interest rates,9
-2017-12-01,interest rates,13
-2018-01-01,interest rates,9
-2018-02-01,interest rates,23
-2018-03-01,interest rates,18
-2018-04-01,interest rates,11
-2018-05-01,interest rates,11
-2018-06-01,interest rates,16
-2018-07-01,interest rates,10
-2018-08-01,interest rates,10
-2018-09-01,interest rates,16
-2018-10-01,interest rates,20
-2018-11-01,interest rates,15
-2018-12-01,interest rates,31
-2019-01-01,interest rates,11
-2019-02-01,interest rates,9
-2019-03-01,interest rates,11
-2019-04-01,interest rates,10
-2019-05-01,interest rates,10
-2019-06-01,interest rates,19
-2019-07-01,interest rates,38
-2019-08-01,interest rates,27
-2019-09-01,interest rates,27
-2019-10-01,interest rates,19
-2019-11-01,interest rates,12
-2019-12-01,interest rates,9
-2020-01-01,interest rates,8
-2020-02-01,interest rates,13
-2020-03-01,interest rates,100
-2020-04-01,interest rates,15
-2020-05-01,interest rates,11
-2020-06-01,interest rates,10
-2020-07-01,interest rates,9
-2020-08-01,interest rates,9
-2020-09-01,interest rates,11
-2020-10-01,interest rates,9
-2020-11-01,interest rates,10
-2020-12-01,interest rates,8
-2021-01-01,interest rates,10
-2021-02-01,interest rates,14
-2021-03-01,interest rates,16
-2021-04-01,interest rates,11
-2021-05-01,interest rates,13
-2021-06-01,interest rates,14
-2021-07-01,interest rates,10
-2021-08-01,interest rates,8
-2021-09-01,interest rates,10
-2021-10-01,interest rates,11
-2021-11-01,interest rates,15
-2021-12-01,interest rates,19
-2022-01-01,interest rates,45
-2022-02-01,interest rates,34
-2022-03-01,interest rates,50
-2022-04-01,interest rates,38
-2022-05-01,interest rates,61
-2022-06-01,interest rates,82
-2022-07-01,interest rates,57
-2022-08-01,interest rates,29
-2022-09-01,interest rates,61
-2022-10-01,interest rates,44
-2022-11-01,interest rates,45
-2022-12-01,interest rates,34
-2023-01-01,interest rates,34
-2023-02-01,interest rates,57
-2023-03-01,interest rates,93
-2023-04-01,interest rates,44
-2023-05-01,interest rates,69
-2023-06-01,interest rates,41
-2023-07-01,interest rates,46
-2023-08-01,interest rates,43
-2023-09-01,interest rates,46
-2023-10-01,interest rates,39
-2023-11-01,interest rates,40
-2023-12-01,interest rates,71
-2004-01-01,unemployment,2
-2004-02-01,unemployment,2
-2004-03-01,unemployment,3
-2004-04-01,unemployment,2
-2004-05-01,unemployment,2
-2004-06-01,unemployment,1
-2004-07-01,unemployment,1
-2004-08-01,unemployment,2
-2004-09-01,unemployment,3
-2004-10-01,unemployment,3
-2004-11-01,unemployment,3
-2004-12-01,unemployment,2
-2005-01-01,unemployment,1
-2005-02-01,unemployment,2
-2005-03-01,unemployment,2
-2005-04-01,unemployment,2
-2005-05-01,unemployment,1
-2005-06-01,unemployment,1
-2005-07-01,unemployment,1
-2005-08-01,unemployment,1
-2005-09-01,unemployment,1
-2005-10-01,unemployment,1
-2005-11-01,unemployment,2
-2005-12-01,unemployment,2
-2006-01-01,unemployment,1
-2006-02-01,unemployment,1
-2006-03-01,unemployment,1
-2006-04-01,unemployment,1
-2006-05-01,unemployment,2
-2006-06-01,unemployment,1
-2006-07-01,unemployment,1
-2006-08-01,unemployment,1
-2006-09-01,unemployment,1
-2006-10-01,unemployment,2
-2006-11-01,unemployment,1
-2006-12-01,unemployment,1
-2007-01-01,unemployment,1
-2007-02-01,unemployment,2
-2007-03-01,unemployment,1
-2007-04-01,unemployment,1
-2007-05-01,unemployment,1
-2007-06-01,unemployment,1
-2007-07-01,unemployment,1
-2007-08-01,unemployment,1
-2007-09-01,unemployment,1
-2007-10-01,unemployment,1
-2007-11-01,unemployment,1
-2007-12-01,unemployment,1
-2008-01-01,unemployment,2
-2008-02-01,unemployment,2
-2008-03-01,unemployment,2
-2008-04-01,unemployment,2
-2008-05-01,unemployment,2
-2008-06-01,unemployment,2
-2008-07-01,unemployment,1
-2008-08-01,unemployment,1
-2008-09-01,unemployment,3
-2008-10-01,unemployment,4
-2008-11-01,unemployment,5
-2008-12-01,unemployment,4
-2009-01-01,unemployment,5
-2009-02-01,unemployment,9
-2009-03-01,unemployment,7
-2009-04-01,unemployment,5
-2009-05-01,unemployment,4
-2009-06-01,unemployment,4
-2009-07-01,unemployment,4
-2009-08-01,unemployment,3
-2009-09-01,unemployment,4
-2009-10-01,unemployment,4
-2009-11-01,unemployment,5
-2009-12-01,unemployment,4
-2010-01-01,unemployment,4
-2010-02-01,unemployment,4
-2010-03-01,unemployment,4
-2010-04-01,unemployment,4
-2010-05-01,unemployment,3
-2010-06-01,unemployment,4
-2010-07-01,unemployment,6
-2010-08-01,unemployment,3
-2010-09-01,unemployment,3
-2010-10-01,unemployment,3
-2010-11-01,unemployment,4
-2010-12-01,unemployment,5
-2011-01-01,unemployment,4
-2011-02-01,unemployment,3
-2011-03-01,unemployment,3
-2011-04-01,unemployment,3
-2011-05-01,unemployment,3
-2011-06-01,unemployment,3
-2011-07-01,unemployment,3
-2011-08-01,unemployment,3
-2011-09-01,unemployment,3
-2011-10-01,unemployment,3
-2011-11-01,unemployment,3
-2011-12-01,unemployment,3
-2012-01-01,unemployment,3
-2012-02-01,unemployment,3
-2012-03-01,unemployment,3
-2012-04-01,unemployment,3
-2012-05-01,unemployment,3
-2012-06-01,unemployment,2
-2012-07-01,unemployment,2
-2012-08-01,unemployment,3
-2012-09-01,unemployment,4
-2012-10-01,unemployment,5
-2012-11-01,unemployment,4
-2012-12-01,unemployment,2
-2013-01-01,unemployment,3
-2013-02-01,unemployment,3
-2013-03-01,unemployment,2
-2013-04-01,unemployment,2
-2013-05-01,unemployment,2
-2013-06-01,unemployment,2
-2013-07-01,unemployment,1
-2013-08-01,unemployment,1
-2013-09-01,unemployment,2
-2013-10-01,unemployment,3
-2013-11-01,unemployment,2
-2013-12-01,unemployment,2
-2014-01-01,unemployment,3
-2014-02-01,unemployment,3
-2014-03-01,unemployment,3
-2014-04-01,unemployment,3
-2014-05-01,unemployment,2
-2014-06-01,unemployment,1
-2014-07-01,unemployment,1
-2014-08-01,unemployment,1
-2014-09-01,unemployment,1
-2014-10-01,unemployment,2
-2014-11-01,unemployment,2
-2014-12-01,unemployment,2
-2015-01-01,unemployment,2
-2015-02-01,unemployment,2
-2015-03-01,unemployment,2
-2015-04-01,unemployment,2
-2015-05-01,unemployment,1
-2015-06-01,unemployment,1
-2015-07-01,unemployment,1
-2015-08-01,unemployment,1
-2015-09-01,unemployment,1
-2015-10-01,unemployment,1
-2015-11-01,unemployment,2
-2015-12-01,unemployment,2
-2016-01-01,unemployment,2
-2016-02-01,unemployment,2
-2016-03-01,unemployment,2
-2016-04-01,unemployment,2
-2016-05-01,unemployment,1
-2016-06-01,unemployment,1
-2016-07-01,unemployment,1
-2016-08-01,unemployment,1
-2016-09-01,unemployment,1
-2016-10-01,unemployment,1
-2016-11-01,unemployment,2
-2016-12-01,unemployment,1
-2017-01-01,unemployment,2
-2017-02-01,unemployment,2
-2017-03-01,unemployment,2
-2017-04-01,unemployment,1
-2017-05-01,unemployment,1
-2017-06-01,unemployment,1
-2017-07-01,unemployment,1
-2017-08-01,unemployment,1
-2017-09-01,unemployment,1
-2017-10-01,unemployment,1
-2017-11-01,unemployment,1
-2017-12-01,unemployment,1
-2018-01-01,unemployment,2
-2018-02-01,unemployment,2
-2018-03-01,unemployment,1
-2018-04-01,unemployment,1
-2018-05-01,unemployment,1
-2018-06-01,unemployment,1
-2018-07-01,unemployment,1
-2018-08-01,unemployment,1
-2018-09-01,unemployment,1
-2018-10-01,unemployment,2
-2018-11-01,unemployment,2
-2018-12-01,unemployment,2
-2019-01-01,unemployment,2
-2019-02-01,unemployment,2
-2019-03-01,unemployment,1
-2019-04-01,unemployment,2
-2019-05-01,unemployment,1
-2019-06-01,unemployment,1
-2019-07-01,unemployment,1
-2019-08-01,unemployment,1
-2019-09-01,unemployment,1
-2019-10-01,unemployment,1
-2019-11-01,unemployment,1
-2019-12-01,unemployment,1
-2020-01-01,unemployment,2
-2020-02-01,unemployment,2
-2020-03-01,unemployment,27
-2020-04-01,unemployment,100
-2020-05-01,unemployment,45
-2020-06-01,unemployment,34
-2020-07-01,unemployment,44
-2020-08-01,unemployment,46
-2020-09-01,unemployment,28
-2020-10-01,unemployment,20
-2020-11-01,unemployment,16
-2020-12-01,unemployment,36
-2021-01-01,unemployment,29
-2021-02-01,unemployment,17
-2021-03-01,unemployment,29
-2021-04-01,unemployment,13
-2021-05-01,unemployment,23
-2021-06-01,unemployment,19
-2021-07-01,unemployment,17
-2021-08-01,unemployment,10
-2021-09-01,unemployment,5
-2021-10-01,unemployment,3
-2021-11-01,unemployment,3
-2021-12-01,unemployment,2
-2022-01-01,unemployment,3
-2022-02-01,unemployment,3
-2022-03-01,unemployment,2
-2022-04-01,unemployment,2
-2022-05-01,unemployment,2
-2022-06-01,unemployment,1
-2022-07-01,unemployment,1
-2022-08-01,unemployment,1
-2022-09-01,unemployment,1
-2022-10-01,unemployment,2
-2022-11-01,unemployment,2
-2022-12-01,unemployment,1
-2023-01-01,unemployment,2
-2023-02-01,unemployment,2
-2023-03-01,unemployment,2
-2023-04-01,unemployment,2
-2023-05-01,unemployment,1
-2023-06-01,unemployment,1
-2023-07-01,unemployment,1
-2023-08-01,unemployment,1
-2023-09-01,unemployment,1
-2023-10-01,unemployment,1
-2023-11-01,unemployment,2
-2023-12-01,unemployment,2
+"","date","keyword","hits"
+"1",2004-01-01,"inflation",23
+"2",2004-02-01,"inflation",27
+"3",2004-03-01,"inflation",27
+"4",2004-04-01,"inflation",37
+"5",2004-05-01,"inflation",29
+"6",2004-06-01,"inflation",26
+"7",2004-07-01,"inflation",20
+"8",2004-08-01,"inflation",19
+"9",2004-09-01,"inflation",28
+"10",2004-10-01,"inflation",27
+"11",2004-11-01,"inflation",31
+"12",2004-12-01,"inflation",28
+"13",2005-01-01,"inflation",24
+"14",2005-02-01,"inflation",28
+"15",2005-03-01,"inflation",31
+"16",2005-04-01,"inflation",34
+"17",2005-05-01,"inflation",25
+"18",2005-06-01,"inflation",21
+"19",2005-07-01,"inflation",18
+"20",2005-08-01,"inflation",20
+"21",2005-09-01,"inflation",25
+"22",2005-10-01,"inflation",31
+"23",2005-11-01,"inflation",25
+"24",2005-12-01,"inflation",23
+"25",2006-01-01,"inflation",23
+"26",2006-02-01,"inflation",25
+"27",2006-03-01,"inflation",25
+"28",2006-04-01,"inflation",30
+"29",2006-05-01,"inflation",31
+"30",2006-06-01,"inflation",26
+"31",2006-07-01,"inflation",19
+"32",2006-08-01,"inflation",19
+"33",2006-09-01,"inflation",21
+"34",2006-10-01,"inflation",23
+"35",2006-11-01,"inflation",24
+"36",2006-12-01,"inflation",21
+"37",2007-01-01,"inflation",19
+"38",2007-02-01,"inflation",25
+"39",2007-03-01,"inflation",23
+"40",2007-04-01,"inflation",25
+"41",2007-05-01,"inflation",22
+"42",2007-06-01,"inflation",18
+"43",2007-07-01,"inflation",16
+"44",2007-08-01,"inflation",18
+"45",2007-09-01,"inflation",21
+"46",2007-10-01,"inflation",24
+"47",2007-11-01,"inflation",26
+"48",2007-12-01,"inflation",24
+"49",2008-01-01,"inflation",30
+"50",2008-02-01,"inflation",31
+"51",2008-03-01,"inflation",33
+"52",2008-04-01,"inflation",32
+"53",2008-05-01,"inflation",29
+"54",2008-06-01,"inflation",31
+"55",2008-07-01,"inflation",27
+"56",2008-08-01,"inflation",22
+"57",2008-09-01,"inflation",28
+"58",2008-10-01,"inflation",33
+"59",2008-11-01,"inflation",27
+"60",2008-12-01,"inflation",23
+"61",2009-01-01,"inflation",21
+"62",2009-02-01,"inflation",27
+"63",2009-03-01,"inflation",29
+"64",2009-04-01,"inflation",24
+"65",2009-05-01,"inflation",21
+"66",2009-06-01,"inflation",20
+"67",2009-07-01,"inflation",15
+"68",2009-08-01,"inflation",16
+"69",2009-09-01,"inflation",17
+"70",2009-10-01,"inflation",20
+"71",2009-11-01,"inflation",20
+"72",2009-12-01,"inflation",19
+"73",2010-01-01,"inflation",16
+"74",2010-02-01,"inflation",19
+"75",2010-03-01,"inflation",19
+"76",2010-04-01,"inflation",19
+"77",2010-05-01,"inflation",18
+"78",2010-06-01,"inflation",12
+"79",2010-07-01,"inflation",11
+"80",2010-08-01,"inflation",12
+"81",2010-09-01,"inflation",13
+"82",2010-10-01,"inflation",19
+"83",2010-11-01,"inflation",24
+"84",2010-12-01,"inflation",15
+"85",2011-01-01,"inflation",17
+"86",2011-02-01,"inflation",24
+"87",2011-03-01,"inflation",20
+"88",2011-04-01,"inflation",27
+"89",2011-05-01,"inflation",19
+"90",2011-06-01,"inflation",14
+"91",2011-07-01,"inflation",14
+"92",2011-08-01,"inflation",15
+"93",2011-09-01,"inflation",15
+"94",2011-10-01,"inflation",17
+"95",2011-11-01,"inflation",16
+"96",2011-12-01,"inflation",14
+"97",2012-01-01,"inflation",12
+"98",2012-02-01,"inflation",14
+"99",2012-03-01,"inflation",15
+"100",2012-04-01,"inflation",16
+"101",2012-05-01,"inflation",14
+"102",2012-06-01,"inflation",11
+"103",2012-07-01,"inflation",9
+"104",2012-08-01,"inflation",10
+"105",2012-09-01,"inflation",17
+"106",2012-10-01,"inflation",16
+"107",2012-11-01,"inflation",15
+"108",2012-12-01,"inflation",13
+"109",2013-01-01,"inflation",13
+"110",2013-02-01,"inflation",15
+"111",2013-03-01,"inflation",14
+"112",2013-04-01,"inflation",16
+"113",2013-05-01,"inflation",13
+"114",2013-06-01,"inflation",10
+"115",2013-07-01,"inflation",9
+"116",2013-08-01,"inflation",9
+"117",2013-09-01,"inflation",12
+"118",2013-10-01,"inflation",16
+"119",2013-11-01,"inflation",15
+"120",2013-12-01,"inflation",14
+"121",2014-01-01,"inflation",13
+"122",2014-02-01,"inflation",14
+"123",2014-03-01,"inflation",15
+"124",2014-04-01,"inflation",16
+"125",2014-05-01,"inflation",16
+"126",2014-06-01,"inflation",12
+"127",2014-07-01,"inflation",10
+"128",2014-08-01,"inflation",9
+"129",2014-09-01,"inflation",14
+"130",2014-10-01,"inflation",16
+"131",2014-11-01,"inflation",14
+"132",2014-12-01,"inflation",14
+"133",2015-01-01,"inflation",14
+"134",2015-02-01,"inflation",15
+"135",2015-03-01,"inflation",16
+"136",2015-04-01,"inflation",17
+"137",2015-05-01,"inflation",16
+"138",2015-06-01,"inflation",11
+"139",2015-07-01,"inflation",11
+"140",2015-08-01,"inflation",11
+"141",2015-09-01,"inflation",17
+"142",2015-10-01,"inflation",16
+"143",2015-11-01,"inflation",16
+"144",2015-12-01,"inflation",16
+"145",2016-01-01,"inflation",13
+"146",2016-02-01,"inflation",16
+"147",2016-03-01,"inflation",15
+"148",2016-04-01,"inflation",18
+"149",2016-05-01,"inflation",14
+"150",2016-06-01,"inflation",10
+"151",2016-07-01,"inflation",9
+"152",2016-08-01,"inflation",9
+"153",2016-09-01,"inflation",14
+"154",2016-10-01,"inflation",15
+"155",2016-11-01,"inflation",17
+"156",2016-12-01,"inflation",15
+"157",2017-01-01,"inflation",14
+"158",2017-02-01,"inflation",16
+"159",2017-03-01,"inflation",17
+"160",2017-04-01,"inflation",16
+"161",2017-05-01,"inflation",14
+"162",2017-06-01,"inflation",10
+"163",2017-07-01,"inflation",10
+"164",2017-08-01,"inflation",10
+"165",2017-09-01,"inflation",14
+"166",2017-10-01,"inflation",15
+"167",2017-11-01,"inflation",15
+"168",2017-12-01,"inflation",15
+"169",2018-01-01,"inflation",14
+"170",2018-02-01,"inflation",24
+"171",2018-03-01,"inflation",16
+"172",2018-04-01,"inflation",18
+"173",2018-05-01,"inflation",15
+"174",2018-06-01,"inflation",11
+"175",2018-07-01,"inflation",11
+"176",2018-08-01,"inflation",12
+"177",2018-09-01,"inflation",15
+"178",2018-10-01,"inflation",18
+"179",2018-11-01,"inflation",16
+"180",2018-12-01,"inflation",15
+"181",2019-01-01,"inflation",13
+"182",2019-02-01,"inflation",15
+"183",2019-03-01,"inflation",15
+"184",2019-04-01,"inflation",17
+"185",2019-05-01,"inflation",15
+"186",2019-06-01,"inflation",11
+"187",2019-07-01,"inflation",11
+"188",2019-08-01,"inflation",11
+"189",2019-09-01,"inflation",13
+"190",2019-10-01,"inflation",14
+"191",2019-11-01,"inflation",13
+"192",2019-12-01,"inflation",13
+"193",2020-01-01,"inflation",13
+"194",2020-02-01,"inflation",15
+"195",2020-03-01,"inflation",17
+"196",2020-04-01,"inflation",19
+"197",2020-05-01,"inflation",16
+"198",2020-06-01,"inflation",12
+"199",2020-07-01,"inflation",13
+"200",2020-08-01,"inflation",16
+"201",2020-09-01,"inflation",18
+"202",2020-10-01,"inflation",13
+"203",2020-11-01,"inflation",14
+"204",2020-12-01,"inflation",15
+"205",2021-01-01,"inflation",17
+"206",2021-02-01,"inflation",23
+"207",2021-03-01,"inflation",26
+"208",2021-04-01,"inflation",24
+"209",2021-05-01,"inflation",51
+"210",2021-06-01,"inflation",43
+"211",2021-07-01,"inflation",28
+"212",2021-08-01,"inflation",22
+"213",2021-09-01,"inflation",23
+"214",2021-10-01,"inflation",35
+"215",2021-11-01,"inflation",53
+"216",2021-12-01,"inflation",42
+"217",2022-01-01,"inflation",51
+"218",2022-02-01,"inflation",57
+"219",2022-03-01,"inflation",60
+"220",2022-04-01,"inflation",63
+"221",2022-05-01,"inflation",76
+"222",2022-06-01,"inflation",100
+"223",2022-07-01,"inflation",79
+"224",2022-08-01,"inflation",87
+"225",2022-09-01,"inflation",80
+"226",2022-10-01,"inflation",94
+"227",2022-11-01,"inflation",68
+"228",2022-12-01,"inflation",47
+"229",2023-01-01,"inflation",43
+"230",2023-02-01,"inflation",47
+"231",2023-03-01,"inflation",43
+"232",2023-04-01,"inflation",38
+"233",2023-05-01,"inflation",34
+"234",2023-06-01,"inflation",27
+"235",2023-07-01,"inflation",30
+"236",2023-08-01,"inflation",31
+"237",2023-09-01,"inflation",34
+"238",2023-10-01,"inflation",32
+"239",2023-11-01,"inflation",35
+"240",2023-12-01,"inflation",32
+"241",2024-01-01,"inflation",27
+"242",2024-02-01,"inflation",35
+"243",2024-03-01,"inflation",35
+"244",2024-04-01,"inflation",43
+"245",2024-05-01,"inflation",39
+"246",2024-06-01,"inflation",30
+"247",2004-01-01,"recession",4
+"248",2004-02-01,"recession",3
+"249",2004-03-01,"recession",6
+"250",2004-04-01,"recession",6
+"251",2004-05-01,"recession",5
+"252",2004-06-01,"recession",3
+"253",2004-07-01,"recession",3
+"254",2004-08-01,"recession",4
+"255",2004-09-01,"recession",4
+"256",2004-10-01,"recession",6
+"257",2004-11-01,"recession",6
+"258",2004-12-01,"recession",4
+"259",2005-01-01,"recession",2
+"260",2005-02-01,"recession",3
+"261",2005-03-01,"recession",4
+"262",2005-04-01,"recession",4
+"263",2005-05-01,"recession",3
+"264",2005-06-01,"recession",3
+"265",2005-07-01,"recession",2
+"266",2005-08-01,"recession",3
+"267",2005-09-01,"recession",6
+"268",2005-10-01,"recession",5
+"269",2005-11-01,"recession",4
+"270",2005-12-01,"recession",4
+"271",2006-01-01,"recession",5
+"272",2006-02-01,"recession",4
+"273",2006-03-01,"recession",4
+"274",2006-04-01,"recession",4
+"275",2006-05-01,"recession",5
+"276",2006-06-01,"recession",4
+"277",2006-07-01,"recession",3
+"278",2006-08-01,"recession",6
+"279",2006-09-01,"recession",6
+"280",2006-10-01,"recession",5
+"281",2006-11-01,"recession",5
+"282",2006-12-01,"recession",4
+"283",2007-01-01,"recession",3
+"284",2007-02-01,"recession",8
+"285",2007-03-01,"recession",8
+"286",2007-04-01,"recession",5
+"287",2007-05-01,"recession",4
+"288",2007-06-01,"recession",3
+"289",2007-07-01,"recession",2
+"290",2007-08-01,"recession",8
+"291",2007-09-01,"recession",14
+"292",2007-10-01,"recession",11
+"293",2007-11-01,"recession",19
+"294",2007-12-01,"recession",16
+"295",2008-01-01,"recession",73
+"296",2008-02-01,"recession",35
+"297",2008-03-01,"recession",42
+"298",2008-04-01,"recession",37
+"299",2008-05-01,"recession",22
+"300",2008-06-01,"recession",15
+"301",2008-07-01,"recession",16
+"302",2008-08-01,"recession",10
+"303",2008-09-01,"recession",25
+"304",2008-10-01,"recession",51
+"305",2008-11-01,"recession",42
+"306",2008-12-01,"recession",53
+"307",2009-01-01,"recession",37
+"308",2009-02-01,"recession",48
+"309",2009-03-01,"recession",45
+"310",2009-04-01,"recession",32
+"311",2009-05-01,"recession",25
+"312",2009-06-01,"recession",18
+"313",2009-07-01,"recession",20
+"314",2009-08-01,"recession",18
+"315",2009-09-01,"recession",21
+"316",2009-10-01,"recession",21
+"317",2009-11-01,"recession",21
+"318",2009-12-01,"recession",18
+"319",2010-01-01,"recession",14
+"320",2010-02-01,"recession",15
+"321",2010-03-01,"recession",15
+"322",2010-04-01,"recession",16
+"323",2010-05-01,"recession",13
+"324",2010-06-01,"recession",11
+"325",2010-07-01,"recession",12
+"326",2010-08-01,"recession",13
+"327",2010-09-01,"recession",17
+"328",2010-10-01,"recession",13
+"329",2010-11-01,"recession",13
+"330",2010-12-01,"recession",11
+"331",2011-01-01,"recession",9
+"332",2011-02-01,"recession",10
+"333",2011-03-01,"recession",11
+"334",2011-04-01,"recession",11
+"335",2011-05-01,"recession",9
+"336",2011-06-01,"recession",10
+"337",2011-07-01,"recession",9
+"338",2011-08-01,"recession",21
+"339",2011-09-01,"recession",15
+"340",2011-10-01,"recession",15
+"341",2011-11-01,"recession",12
+"342",2011-12-01,"recession",9
+"343",2012-01-01,"recession",7
+"344",2012-02-01,"recession",8
+"345",2012-03-01,"recession",8
+"346",2012-04-01,"recession",10
+"347",2012-05-01,"recession",9
+"348",2012-06-01,"recession",7
+"349",2012-07-01,"recession",7
+"350",2012-08-01,"recession",7
+"351",2012-09-01,"recession",9
+"352",2012-10-01,"recession",10
+"353",2012-11-01,"recession",11
+"354",2012-12-01,"recession",7
+"355",2013-01-01,"recession",6
+"356",2013-02-01,"recession",7
+"357",2013-03-01,"recession",6
+"358",2013-04-01,"recession",7
+"359",2013-05-01,"recession",6
+"360",2013-06-01,"recession",4
+"361",2013-07-01,"recession",4
+"362",2013-08-01,"recession",4
+"363",2013-09-01,"recession",6
+"364",2013-10-01,"recession",6
+"365",2013-11-01,"recession",6
+"366",2013-12-01,"recession",5
+"367",2014-01-01,"recession",5
+"368",2014-02-01,"recession",5
+"369",2014-03-01,"recession",5
+"370",2014-04-01,"recession",7
+"371",2014-05-01,"recession",6
+"372",2014-06-01,"recession",4
+"373",2014-07-01,"recession",4
+"374",2014-08-01,"recession",3
+"375",2014-09-01,"recession",5
+"376",2014-10-01,"recession",6
+"377",2014-11-01,"recession",7
+"378",2014-12-01,"recession",6
+"379",2015-01-01,"recession",5
+"380",2015-02-01,"recession",6
+"381",2015-03-01,"recession",6
+"382",2015-04-01,"recession",7
+"383",2015-05-01,"recession",6
+"384",2015-06-01,"recession",4
+"385",2015-07-01,"recession",4
+"386",2015-08-01,"recession",7
+"387",2015-09-01,"recession",8
+"388",2015-10-01,"recession",7
+"389",2015-11-01,"recession",6
+"390",2015-12-01,"recession",7
+"391",2016-01-01,"recession",10
+"392",2016-02-01,"recession",11
+"393",2016-03-01,"recession",8
+"394",2016-04-01,"recession",10
+"395",2016-05-01,"recession",8
+"396",2016-06-01,"recession",7
+"397",2016-07-01,"recession",5
+"398",2016-08-01,"recession",5
+"399",2016-09-01,"recession",7
+"400",2016-10-01,"recession",8
+"401",2016-11-01,"recession",10
+"402",2016-12-01,"recession",6
+"403",2017-01-01,"recession",6
+"404",2017-02-01,"recession",7
+"405",2017-03-01,"recession",7
+"406",2017-04-01,"recession",7
+"407",2017-05-01,"recession",7
+"408",2017-06-01,"recession",5
+"409",2017-07-01,"recession",5
+"410",2017-08-01,"recession",4
+"411",2017-09-01,"recession",5
+"412",2017-10-01,"recession",6
+"413",2017-11-01,"recession",6
+"414",2017-12-01,"recession",6
+"415",2018-01-01,"recession",6
+"416",2018-02-01,"recession",9
+"417",2018-03-01,"recession",7
+"418",2018-04-01,"recession",8
+"419",2018-05-01,"recession",8
+"420",2018-06-01,"recession",10
+"421",2018-07-01,"recession",8
+"422",2018-08-01,"recession",8
+"423",2018-09-01,"recession",10
+"424",2018-10-01,"recession",11
+"425",2018-11-01,"recession",12
+"426",2018-12-01,"recession",19
+"427",2019-01-01,"recession",12
+"428",2019-02-01,"recession",11
+"429",2019-03-01,"recession",14
+"430",2019-04-01,"recession",11
+"431",2019-05-01,"recession",11
+"432",2019-06-01,"recession",9
+"433",2019-07-01,"recession",11
+"434",2019-08-01,"recession",54
+"435",2019-09-01,"recession",21
+"436",2019-10-01,"recession",16
+"437",2019-11-01,"recession",12
+"438",2019-12-01,"recession",10
+"439",2020-01-01,"recession",10
+"440",2020-02-01,"recession",15
+"441",2020-03-01,"recession",76
+"442",2020-04-01,"recession",36
+"443",2020-05-01,"recession",17
+"444",2020-06-01,"recession",16
+"445",2020-07-01,"recession",10
+"446",2020-08-01,"recession",10
+"447",2020-09-01,"recession",9
+"448",2020-10-01,"recession",8
+"449",2020-11-01,"recession",8
+"450",2020-12-01,"recession",6
+"451",2021-01-01,"recession",6
+"452",2021-02-01,"recession",6
+"453",2021-03-01,"recession",5
+"454",2021-04-01,"recession",5
+"455",2021-05-01,"recession",6
+"456",2021-06-01,"recession",4
+"457",2021-07-01,"recession",4
+"458",2021-08-01,"recession",3
+"459",2021-09-01,"recession",5
+"460",2021-10-01,"recession",6
+"461",2021-11-01,"recession",6
+"462",2021-12-01,"recession",5
+"463",2022-01-01,"recession",8
+"464",2022-02-01,"recession",10
+"465",2022-03-01,"recession",21
+"466",2022-04-01,"recession",36
+"467",2022-05-01,"recession",53
+"468",2022-06-01,"recession",100
+"469",2022-07-01,"recession",83
+"470",2022-08-01,"recession",34
+"471",2022-09-01,"recession",30
+"472",2022-10-01,"recession",40
+"473",2022-11-01,"recession",32
+"474",2022-12-01,"recession",26
+"475",2023-01-01,"recession",26
+"476",2023-02-01,"recession",20
+"477",2023-03-01,"recession",26
+"478",2023-04-01,"recession",24
+"479",2023-05-01,"recession",24
+"480",2023-06-01,"recession",15
+"481",2023-07-01,"recession",13
+"482",2023-08-01,"recession",15
+"483",2023-09-01,"recession",14
+"484",2023-10-01,"recession",14
+"485",2023-11-01,"recession",12
+"486",2023-12-01,"recession",10
+"487",2024-01-01,"recession",9
+"488",2024-02-01,"recession",13
+"489",2024-03-01,"recession",10
+"490",2024-04-01,"recession",10
+"491",2024-05-01,"recession",9
+"492",2024-06-01,"recession",8
+"493",2004-01-01,"prices",45
+"494",2004-02-01,"prices",44
+"495",2004-03-01,"prices",45
+"496",2004-04-01,"prices",51
+"497",2004-05-01,"prices",46
+"498",2004-06-01,"prices",32
+"499",2004-07-01,"prices",31
+"500",2004-08-01,"prices",30
+"501",2004-09-01,"prices",31
+"502",2004-10-01,"prices",39
+"503",2004-11-01,"prices",40
+"504",2004-12-01,"prices",31
+"505",2005-01-01,"prices",31
+"506",2005-02-01,"prices",41
+"507",2005-03-01,"prices",46
+"508",2005-04-01,"prices",52
+"509",2005-05-01,"prices",32
+"510",2005-06-01,"prices",30
+"511",2005-07-01,"prices",30
+"512",2005-08-01,"prices",40
+"513",2005-09-01,"prices",57
+"514",2005-10-01,"prices",39
+"515",2005-11-01,"prices",35
+"516",2005-12-01,"prices",29
+"517",2006-01-01,"prices",34
+"518",2006-02-01,"prices",38
+"519",2006-03-01,"prices",39
+"520",2006-04-01,"prices",49
+"521",2006-05-01,"prices",41
+"522",2006-06-01,"prices",27
+"523",2006-07-01,"prices",33
+"524",2006-08-01,"prices",30
+"525",2006-09-01,"prices",40
+"526",2006-10-01,"prices",34
+"527",2006-11-01,"prices",30
+"528",2006-12-01,"prices",28
+"529",2007-01-01,"prices",28
+"530",2007-02-01,"prices",38
+"531",2007-03-01,"prices",37
+"532",2007-04-01,"prices",39
+"533",2007-05-01,"prices",37
+"534",2007-06-01,"prices",27
+"535",2007-07-01,"prices",28
+"536",2007-08-01,"prices",29
+"537",2007-09-01,"prices",28
+"538",2007-10-01,"prices",31
+"539",2007-11-01,"prices",35
+"540",2007-12-01,"prices",33
+"541",2008-01-01,"prices",38
+"542",2008-02-01,"prices",38
+"543",2008-03-01,"prices",55
+"544",2008-04-01,"prices",57
+"545",2008-05-01,"prices",58
+"546",2008-06-01,"prices",51
+"547",2008-07-01,"prices",51
+"548",2008-08-01,"prices",38
+"549",2008-09-01,"prices",80
+"550",2008-10-01,"prices",100
+"551",2008-11-01,"prices",71
+"552",2008-12-01,"prices",54
+"553",2009-01-01,"prices",45
+"554",2009-02-01,"prices",48
+"555",2009-03-01,"prices",50
+"556",2009-04-01,"prices",42
+"557",2009-05-01,"prices",37
+"558",2009-06-01,"prices",32
+"559",2009-07-01,"prices",29
+"560",2009-08-01,"prices",27
+"561",2009-09-01,"prices",31
+"562",2009-10-01,"prices",32
+"563",2009-11-01,"prices",31
+"564",2009-12-01,"prices",28
+"565",2010-01-01,"prices",29
+"566",2010-02-01,"prices",31
+"567",2010-03-01,"prices",33
+"568",2010-04-01,"prices",34
+"569",2010-05-01,"prices",31
+"570",2010-06-01,"prices",22
+"571",2010-07-01,"prices",22
+"572",2010-08-01,"prices",20
+"573",2010-09-01,"prices",23
+"574",2010-10-01,"prices",24
+"575",2010-11-01,"prices",27
+"576",2010-12-01,"prices",24
+"577",2011-01-01,"prices",32
+"578",2011-02-01,"prices",40
+"579",2011-03-01,"prices",46
+"580",2011-04-01,"prices",47
+"581",2011-05-01,"prices",40
+"582",2011-06-01,"prices",31
+"583",2011-07-01,"prices",28
+"584",2011-08-01,"prices",41
+"585",2011-09-01,"prices",31
+"586",2011-10-01,"prices",32
+"587",2011-11-01,"prices",27
+"588",2011-12-01,"prices",24
+"589",2012-01-01,"prices",28
+"590",2012-02-01,"prices",37
+"591",2012-03-01,"prices",43
+"592",2012-04-01,"prices",36
+"593",2012-05-01,"prices",29
+"594",2012-06-01,"prices",28
+"595",2012-07-01,"prices",26
+"596",2012-08-01,"prices",27
+"597",2012-09-01,"prices",30
+"598",2012-10-01,"prices",36
+"599",2012-11-01,"prices",34
+"600",2012-12-01,"prices",23
+"601",2013-01-01,"prices",27
+"602",2013-02-01,"prices",30
+"603",2013-03-01,"prices",30
+"604",2013-04-01,"prices",32
+"605",2013-05-01,"prices",29
+"606",2013-06-01,"prices",26
+"607",2013-07-01,"prices",27
+"608",2013-08-01,"prices",23
+"609",2013-09-01,"prices",25
+"610",2013-10-01,"prices",27
+"611",2013-11-01,"prices",24
+"612",2013-12-01,"prices",23
+"613",2014-01-01,"prices",25
+"614",2014-02-01,"prices",28
+"615",2014-03-01,"prices",26
+"616",2014-04-01,"prices",29
+"617",2014-05-01,"prices",25
+"618",2014-06-01,"prices",24
+"619",2014-07-01,"prices",23
+"620",2014-08-01,"prices",21
+"621",2014-09-01,"prices",23
+"622",2014-10-01,"prices",31
+"623",2014-11-01,"prices",29
+"624",2014-12-01,"prices",40
+"625",2015-01-01,"prices",45
+"626",2015-02-01,"prices",35
+"627",2015-03-01,"prices",37
+"628",2015-04-01,"prices",33
+"629",2015-05-01,"prices",29
+"630",2015-06-01,"prices",28
+"631",2015-07-01,"prices",33
+"632",2015-08-01,"prices",39
+"633",2015-09-01,"prices",30
+"634",2015-10-01,"prices",32
+"635",2015-11-01,"prices",29
+"636",2015-12-01,"prices",33
+"637",2016-01-01,"prices",44
+"638",2016-02-01,"prices",42
+"639",2016-03-01,"prices",36
+"640",2016-04-01,"prices",34
+"641",2016-05-01,"prices",32
+"642",2016-06-01,"prices",32
+"643",2016-07-01,"prices",32
+"644",2016-08-01,"prices",26
+"645",2016-09-01,"prices",28
+"646",2016-10-01,"prices",30
+"647",2016-11-01,"prices",35
+"648",2016-12-01,"prices",30
+"649",2017-01-01,"prices",30
+"650",2017-02-01,"prices",28
+"651",2017-03-01,"prices",30
+"652",2017-04-01,"prices",30
+"653",2017-05-01,"prices",28
+"654",2017-06-01,"prices",29
+"655",2017-07-01,"prices",29
+"656",2017-08-01,"prices",28
+"657",2017-09-01,"prices",25
+"658",2017-10-01,"prices",25
+"659",2017-11-01,"prices",27
+"660",2017-12-01,"prices",29
+"661",2018-01-01,"prices",31
+"662",2018-02-01,"prices",33
+"663",2018-03-01,"prices",30
+"664",2018-04-01,"prices",28
+"665",2018-05-01,"prices",30
+"666",2018-06-01,"prices",27
+"667",2018-07-01,"prices",28
+"668",2018-08-01,"prices",26
+"669",2018-09-01,"prices",26
+"670",2018-10-01,"prices",28
+"671",2018-11-01,"prices",31
+"672",2018-12-01,"prices",30
+"673",2019-01-01,"prices",28
+"674",2019-02-01,"prices",27
+"675",2019-03-01,"prices",27
+"676",2019-04-01,"prices",26
+"677",2019-05-01,"prices",29
+"678",2019-06-01,"prices",27
+"679",2019-07-01,"prices",25
+"680",2019-08-01,"prices",27
+"681",2019-09-01,"prices",25
+"682",2019-10-01,"prices",23
+"683",2019-11-01,"prices",21
+"684",2019-12-01,"prices",22
+"685",2020-01-01,"prices",25
+"686",2020-02-01,"prices",31
+"687",2020-03-01,"prices",83
+"688",2020-04-01,"prices",75
+"689",2020-05-01,"prices",37
+"690",2020-06-01,"prices",33
+"691",2020-07-01,"prices",32
+"692",2020-08-01,"prices",29
+"693",2020-09-01,"prices",26
+"694",2020-10-01,"prices",28
+"695",2020-11-01,"prices",41
+"696",2020-12-01,"prices",25
+"697",2021-01-01,"prices",34
+"698",2021-02-01,"prices",38
+"699",2021-03-01,"prices",35
+"700",2021-04-01,"prices",29
+"701",2021-05-01,"prices",34
+"702",2021-06-01,"prices",30
+"703",2021-07-01,"prices",28
+"704",2021-08-01,"prices",25
+"705",2021-09-01,"prices",25
+"706",2021-10-01,"prices",32
+"707",2021-11-01,"prices",30
+"708",2021-12-01,"prices",28
+"709",2022-01-01,"prices",29
+"710",2022-02-01,"prices",40
+"711",2022-03-01,"prices",98
+"712",2022-04-01,"prices",41
+"713",2022-05-01,"prices",50
+"714",2022-06-01,"prices",59
+"715",2022-07-01,"prices",44
+"716",2022-08-01,"prices",33
+"717",2022-09-01,"prices",28
+"718",2022-10-01,"prices",34
+"719",2022-11-01,"prices",33
+"720",2022-12-01,"prices",27
+"721",2023-01-01,"prices",27
+"722",2023-02-01,"prices",27
+"723",2023-03-01,"prices",27
+"724",2023-04-01,"prices",25
+"725",2023-05-01,"prices",23
+"726",2023-06-01,"prices",23
+"727",2023-07-01,"prices",26
+"728",2023-08-01,"prices",24
+"729",2023-09-01,"prices",24
+"730",2023-10-01,"prices",25
+"731",2023-11-01,"prices",24
+"732",2023-12-01,"prices",24
+"733",2024-01-01,"prices",24
+"734",2024-02-01,"prices",22
+"735",2024-03-01,"prices",25
+"736",2024-04-01,"prices",31
+"737",2024-05-01,"prices",23
+"738",2024-06-01,"prices",22
+"739",2004-01-01,"interest rates",15
+"740",2004-02-01,"interest rates",13
+"741",2004-03-01,"interest rates",17
+"742",2004-04-01,"interest rates",27
+"743",2004-05-01,"interest rates",25
+"744",2004-06-01,"interest rates",27
+"745",2004-07-01,"interest rates",17
+"746",2004-08-01,"interest rates",12
+"747",2004-09-01,"interest rates",18
+"748",2004-10-01,"interest rates",13
+"749",2004-11-01,"interest rates",24
+"750",2004-12-01,"interest rates",18
+"751",2005-01-01,"interest rates",15
+"752",2005-02-01,"interest rates",20
+"753",2005-03-01,"interest rates",25
+"754",2005-04-01,"interest rates",21
+"755",2005-05-01,"interest rates",19
+"756",2005-06-01,"interest rates",19
+"757",2005-07-01,"interest rates",15
+"758",2005-08-01,"interest rates",18
+"759",2005-09-01,"interest rates",21
+"760",2005-10-01,"interest rates",14
+"761",2005-11-01,"interest rates",18
+"762",2005-12-01,"interest rates",15
+"763",2006-01-01,"interest rates",18
+"764",2006-02-01,"interest rates",16
+"765",2006-03-01,"interest rates",19
+"766",2006-04-01,"interest rates",19
+"767",2006-05-01,"interest rates",22
+"768",2006-06-01,"interest rates",22
+"769",2006-07-01,"interest rates",17
+"770",2006-08-01,"interest rates",17
+"771",2006-09-01,"interest rates",16
+"772",2006-10-01,"interest rates",15
+"773",2006-11-01,"interest rates",16
+"774",2006-12-01,"interest rates",13
+"775",2007-01-01,"interest rates",14
+"776",2007-02-01,"interest rates",13
+"777",2007-03-01,"interest rates",20
+"778",2007-04-01,"interest rates",17
+"779",2007-05-01,"interest rates",13
+"780",2007-06-01,"interest rates",16
+"781",2007-07-01,"interest rates",11
+"782",2007-08-01,"interest rates",20
+"783",2007-09-01,"interest rates",33
+"784",2007-10-01,"interest rates",23
+"785",2007-11-01,"interest rates",21
+"786",2007-12-01,"interest rates",19
+"787",2008-01-01,"interest rates",46
+"788",2008-02-01,"interest rates",29
+"789",2008-03-01,"interest rates",35
+"790",2008-04-01,"interest rates",21
+"791",2008-05-01,"interest rates",15
+"792",2008-06-01,"interest rates",17
+"793",2008-07-01,"interest rates",13
+"794",2008-08-01,"interest rates",11
+"795",2008-09-01,"interest rates",20
+"796",2008-10-01,"interest rates",27
+"797",2008-11-01,"interest rates",16
+"798",2008-12-01,"interest rates",27
+"799",2009-01-01,"interest rates",19
+"800",2009-02-01,"interest rates",21
+"801",2009-03-01,"interest rates",18
+"802",2009-04-01,"interest rates",13
+"803",2009-05-01,"interest rates",12
+"804",2009-06-01,"interest rates",18
+"805",2009-07-01,"interest rates",9
+"806",2009-08-01,"interest rates",11
+"807",2009-09-01,"interest rates",10
+"808",2009-10-01,"interest rates",12
+"809",2009-11-01,"interest rates",11
+"810",2009-12-01,"interest rates",11
+"811",2010-01-01,"interest rates",11
+"812",2010-02-01,"interest rates",13
+"813",2010-03-01,"interest rates",11
+"814",2010-04-01,"interest rates",14
+"815",2010-05-01,"interest rates",9
+"816",2010-06-01,"interest rates",9
+"817",2010-07-01,"interest rates",8
+"818",2010-08-01,"interest rates",9
+"819",2010-09-01,"interest rates",10
+"820",2010-10-01,"interest rates",11
+"821",2010-11-01,"interest rates",13
+"822",2010-12-01,"interest rates",13
+"823",2011-01-01,"interest rates",10
+"824",2011-02-01,"interest rates",12
+"825",2011-03-01,"interest rates",10
+"826",2011-04-01,"interest rates",13
+"827",2011-05-01,"interest rates",9
+"828",2011-06-01,"interest rates",9
+"829",2011-07-01,"interest rates",9
+"830",2011-08-01,"interest rates",14
+"831",2011-09-01,"interest rates",10
+"832",2011-10-01,"interest rates",9
+"833",2011-11-01,"interest rates",8
+"834",2011-12-01,"interest rates",8
+"835",2012-01-01,"interest rates",9
+"836",2012-02-01,"interest rates",9
+"837",2012-03-01,"interest rates",9
+"838",2012-04-01,"interest rates",10
+"839",2012-05-01,"interest rates",8
+"840",2012-06-01,"interest rates",9
+"841",2012-07-01,"interest rates",7
+"842",2012-08-01,"interest rates",7
+"843",2012-09-01,"interest rates",11
+"844",2012-10-01,"interest rates",9
+"845",2012-11-01,"interest rates",8
+"846",2012-12-01,"interest rates",9
+"847",2013-01-01,"interest rates",7
+"848",2013-02-01,"interest rates",9
+"849",2013-03-01,"interest rates",8
+"850",2013-04-01,"interest rates",9
+"851",2013-05-01,"interest rates",11
+"852",2013-06-01,"interest rates",20
+"853",2013-07-01,"interest rates",13
+"854",2013-08-01,"interest rates",10
+"855",2013-09-01,"interest rates",12
+"856",2013-10-01,"interest rates",10
+"857",2013-11-01,"interest rates",9
+"858",2013-12-01,"interest rates",10
+"859",2014-01-01,"interest rates",8
+"860",2014-02-01,"interest rates",8
+"861",2014-03-01,"interest rates",8
+"862",2014-04-01,"interest rates",9
+"863",2014-05-01,"interest rates",9
+"864",2014-06-01,"interest rates",8
+"865",2014-07-01,"interest rates",7
+"866",2014-08-01,"interest rates",7
+"867",2014-09-01,"interest rates",10
+"868",2014-10-01,"interest rates",9
+"869",2014-11-01,"interest rates",8
+"870",2014-12-01,"interest rates",11
+"871",2015-01-01,"interest rates",11
+"872",2015-02-01,"interest rates",11
+"873",2015-03-01,"interest rates",19
+"874",2015-04-01,"interest rates",13
+"875",2015-05-01,"interest rates",12
+"876",2015-06-01,"interest rates",14
+"877",2015-07-01,"interest rates",12
+"878",2015-08-01,"interest rates",18
+"879",2015-09-01,"interest rates",41
+"880",2015-10-01,"interest rates",14
+"881",2015-11-01,"interest rates",18
+"882",2015-12-01,"interest rates",44
+"883",2016-01-01,"interest rates",18
+"884",2016-02-01,"interest rates",34
+"885",2016-03-01,"interest rates",13
+"886",2016-04-01,"interest rates",13
+"887",2016-05-01,"interest rates",13
+"888",2016-06-01,"interest rates",11
+"889",2016-07-01,"interest rates",8
+"890",2016-08-01,"interest rates",11
+"891",2016-09-01,"interest rates",19
+"892",2016-10-01,"interest rates",13
+"893",2016-11-01,"interest rates",21
+"894",2016-12-01,"interest rates",30
+"895",2017-01-01,"interest rates",10
+"896",2017-02-01,"interest rates",10
+"897",2017-03-01,"interest rates",27
+"898",2017-04-01,"interest rates",11
+"899",2017-05-01,"interest rates",10
+"900",2017-06-01,"interest rates",14
+"901",2017-07-01,"interest rates",7
+"902",2017-08-01,"interest rates",6
+"903",2017-09-01,"interest rates",8
+"904",2017-10-01,"interest rates",8
+"905",2017-11-01,"interest rates",9
+"906",2017-12-01,"interest rates",13
+"907",2018-01-01,"interest rates",9
+"908",2018-02-01,"interest rates",22
+"909",2018-03-01,"interest rates",18
+"910",2018-04-01,"interest rates",12
+"911",2018-05-01,"interest rates",11
+"912",2018-06-01,"interest rates",16
+"913",2018-07-01,"interest rates",10
+"914",2018-08-01,"interest rates",9
+"915",2018-09-01,"interest rates",17
+"916",2018-10-01,"interest rates",20
+"917",2018-11-01,"interest rates",15
+"918",2018-12-01,"interest rates",30
+"919",2019-01-01,"interest rates",11
+"920",2019-02-01,"interest rates",9
+"921",2019-03-01,"interest rates",12
+"922",2019-04-01,"interest rates",10
+"923",2019-05-01,"interest rates",9
+"924",2019-06-01,"interest rates",19
+"925",2019-07-01,"interest rates",36
+"926",2019-08-01,"interest rates",27
+"927",2019-09-01,"interest rates",27
+"928",2019-10-01,"interest rates",19
+"929",2019-11-01,"interest rates",12
+"930",2019-12-01,"interest rates",9
+"931",2020-01-01,"interest rates",8
+"932",2020-02-01,"interest rates",12
+"933",2020-03-01,"interest rates",100
+"934",2020-04-01,"interest rates",16
+"935",2020-05-01,"interest rates",11
+"936",2020-06-01,"interest rates",10
+"937",2020-07-01,"interest rates",10
+"938",2020-08-01,"interest rates",10
+"939",2020-09-01,"interest rates",11
+"940",2020-10-01,"interest rates",9
+"941",2020-11-01,"interest rates",10
+"942",2020-12-01,"interest rates",7
+"943",2021-01-01,"interest rates",11
+"944",2021-02-01,"interest rates",14
+"945",2021-03-01,"interest rates",16
+"946",2021-04-01,"interest rates",11
+"947",2021-05-01,"interest rates",12
+"948",2021-06-01,"interest rates",13
+"949",2021-07-01,"interest rates",9
+"950",2021-08-01,"interest rates",8
+"951",2021-09-01,"interest rates",9
+"952",2021-10-01,"interest rates",11
+"953",2021-11-01,"interest rates",15
+"954",2021-12-01,"interest rates",20
+"955",2022-01-01,"interest rates",43
+"956",2022-02-01,"interest rates",34
+"957",2022-03-01,"interest rates",53
+"958",2022-04-01,"interest rates",36
+"959",2022-05-01,"interest rates",64
+"960",2022-06-01,"interest rates",86
+"961",2022-07-01,"interest rates",55
+"962",2022-08-01,"interest rates",27
+"963",2022-09-01,"interest rates",58
+"964",2022-10-01,"interest rates",41
+"965",2022-11-01,"interest rates",46
+"966",2022-12-01,"interest rates",40
+"967",2023-01-01,"interest rates",33
+"968",2023-02-01,"interest rates",60
+"969",2023-03-01,"interest rates",93
+"970",2023-04-01,"interest rates",42
+"971",2023-05-01,"interest rates",70
+"972",2023-06-01,"interest rates",39
+"973",2023-07-01,"interest rates",45
+"974",2023-08-01,"interest rates",44
+"975",2023-09-01,"interest rates",44
+"976",2023-10-01,"interest rates",36
+"977",2023-11-01,"interest rates",38
+"978",2023-12-01,"interest rates",52
+"979",2024-01-01,"interest rates",40
+"980",2024-02-01,"interest rates",33
+"981",2024-03-01,"interest rates",40
+"982",2024-04-01,"interest rates",43
+"983",2024-05-01,"interest rates",32
+"984",2024-06-01,"interest rates",32
+"985",2004-01-01,"layoff",13
+"986",2004-02-01,"layoff",10
+"987",2004-03-01,"layoff",13
+"988",2004-04-01,"layoff",13
+"989",2004-05-01,"layoff",11
+"990",2004-06-01,"layoff",10
+"991",2004-07-01,"layoff",10
+"992",2004-08-01,"layoff",12
+"993",2004-09-01,"layoff",12
+"994",2004-10-01,"layoff",11
+"995",2004-11-01,"layoff",12
+"996",2004-12-01,"layoff",11
+"997",2005-01-01,"layoff",9
+"998",2005-02-01,"layoff",10
+"999",2005-03-01,"layoff",9
+"1000",2005-04-01,"layoff",10
+"1001",2005-05-01,"layoff",13
+"1002",2005-06-01,"layoff",13
+"1003",2005-07-01,"layoff",15
+"1004",2005-08-01,"layoff",6
+"1005",2005-09-01,"layoff",7
+"1006",2005-10-01,"layoff",12
+"1007",2005-11-01,"layoff",9
+"1008",2005-12-01,"layoff",6
+"1009",2006-01-01,"layoff",8
+"1010",2006-02-01,"layoff",7
+"1011",2006-03-01,"layoff",7
+"1012",2006-04-01,"layoff",7
+"1013",2006-05-01,"layoff",7
+"1014",2006-06-01,"layoff",10
+"1015",2006-07-01,"layoff",12
+"1016",2006-08-01,"layoff",11
+"1017",2006-09-01,"layoff",14
+"1018",2006-10-01,"layoff",8
+"1019",2006-11-01,"layoff",6
+"1020",2006-12-01,"layoff",7
+"1021",2007-01-01,"layoff",9
+"1022",2007-02-01,"layoff",9
+"1023",2007-03-01,"layoff",10
+"1024",2007-04-01,"layoff",9
+"1025",2007-05-01,"layoff",16
+"1026",2007-06-01,"layoff",10
+"1027",2007-07-01,"layoff",7
+"1028",2007-08-01,"layoff",10
+"1029",2007-09-01,"layoff",9
+"1030",2007-10-01,"layoff",14
+"1031",2007-11-01,"layoff",12
+"1032",2007-12-01,"layoff",8
+"1033",2008-01-01,"layoff",18
+"1034",2008-02-01,"layoff",13
+"1035",2008-03-01,"layoff",13
+"1036",2008-04-01,"layoff",19
+"1037",2008-05-01,"layoff",15
+"1038",2008-06-01,"layoff",15
+"1039",2008-07-01,"layoff",14
+"1040",2008-08-01,"layoff",13
+"1041",2008-09-01,"layoff",18
+"1042",2008-10-01,"layoff",39
+"1043",2008-11-01,"layoff",53
+"1044",2008-12-01,"layoff",57
+"1045",2009-01-01,"layoff",100
+"1046",2009-02-01,"layoff",69
+"1047",2009-03-01,"layoff",57
+"1048",2009-04-01,"layoff",34
+"1049",2009-05-01,"layoff",28
+"1050",2009-06-01,"layoff",20
+"1051",2009-07-01,"layoff",18
+"1052",2009-08-01,"layoff",15
+"1053",2009-09-01,"layoff",12
+"1054",2009-10-01,"layoff",14
+"1055",2009-11-01,"layoff",14
+"1056",2009-12-01,"layoff",8
+"1057",2010-01-01,"layoff",13
+"1058",2010-02-01,"layoff",12
+"1059",2010-03-01,"layoff",13
+"1060",2010-04-01,"layoff",9
+"1061",2010-05-01,"layoff",10
+"1062",2010-06-01,"layoff",11
+"1063",2010-07-01,"layoff",8
+"1064",2010-08-01,"layoff",7
+"1065",2010-09-01,"layoff",7
+"1066",2010-10-01,"layoff",8
+"1067",2010-11-01,"layoff",8
+"1068",2010-12-01,"layoff",8
+"1069",2011-01-01,"layoff",8
+"1070",2011-02-01,"layoff",9
+"1071",2011-03-01,"layoff",9
+"1072",2011-04-01,"layoff",8
+"1073",2011-05-01,"layoff",8
+"1074",2011-06-01,"layoff",10
+"1075",2011-07-01,"layoff",10
+"1076",2011-08-01,"layoff",10
+"1077",2011-09-01,"layoff",10
+"1078",2011-10-01,"layoff",9
+"1079",2011-11-01,"layoff",8
+"1080",2011-12-01,"layoff",6
+"1081",2012-01-01,"layoff",8
+"1082",2012-02-01,"layoff",9
+"1083",2012-03-01,"layoff",7
+"1084",2012-04-01,"layoff",7
+"1085",2012-05-01,"layoff",9
+"1086",2012-06-01,"layoff",7
+"1087",2012-07-01,"layoff",7
+"1088",2012-08-01,"layoff",8
+"1089",2012-09-01,"layoff",7
+"1090",2012-10-01,"layoff",11
+"1091",2012-11-01,"layoff",12
+"1092",2012-12-01,"layoff",6
+"1093",2013-01-01,"layoff",7
+"1094",2013-02-01,"layoff",8
+"1095",2013-03-01,"layoff",6
+"1096",2013-04-01,"layoff",7
+"1097",2013-05-01,"layoff",7
+"1098",2013-06-01,"layoff",9
+"1099",2013-07-01,"layoff",5
+"1100",2013-08-01,"layoff",7
+"1101",2013-09-01,"layoff",8
+"1102",2013-10-01,"layoff",10
+"1103",2013-11-01,"layoff",6
+"1104",2013-12-01,"layoff",5
+"1105",2014-01-01,"layoff",9
+"1106",2014-02-01,"layoff",10
+"1107",2014-03-01,"layoff",6
+"1108",2014-04-01,"layoff",5
+"1109",2014-05-01,"layoff",6
+"1110",2014-06-01,"layoff",6
+"1111",2014-07-01,"layoff",11
+"1112",2014-08-01,"layoff",7
+"1113",2014-09-01,"layoff",7
+"1114",2014-10-01,"layoff",7
+"1115",2014-11-01,"layoff",5
+"1116",2014-12-01,"layoff",8
+"1117",2015-01-01,"layoff",14
+"1118",2015-02-01,"layoff",12
+"1119",2015-03-01,"layoff",11
+"1120",2015-04-01,"layoff",11
+"1121",2015-05-01,"layoff",9
+"1122",2015-06-01,"layoff",12
+"1123",2015-07-01,"layoff",20
+"1124",2015-08-01,"layoff",15
+"1125",2015-09-01,"layoff",22
+"1126",2015-10-01,"layoff",16
+"1127",2015-11-01,"layoff",12
+"1128",2015-12-01,"layoff",8
+"1129",2016-01-01,"layoff",15
+"1130",2016-02-01,"layoff",17
+"1131",2016-03-01,"layoff",14
+"1132",2016-04-01,"layoff",19
+"1133",2016-05-01,"layoff",16
+"1134",2016-06-01,"layoff",13
+"1135",2016-07-01,"layoff",10
+"1136",2016-08-01,"layoff",11
+"1137",2016-09-01,"layoff",10
+"1138",2016-10-01,"layoff",10
+"1139",2016-11-01,"layoff",10
+"1140",2016-12-01,"layoff",8
+"1141",2017-01-01,"layoff",13
+"1142",2017-02-01,"layoff",11
+"1143",2017-03-01,"layoff",11
+"1144",2017-04-01,"layoff",16
+"1145",2017-05-01,"layoff",11
+"1146",2017-06-01,"layoff",11
+"1147",2017-07-01,"layoff",12
+"1148",2017-08-01,"layoff",10
+"1149",2017-09-01,"layoff",9
+"1150",2017-10-01,"layoff",11
+"1151",2017-11-01,"layoff",12
+"1152",2017-12-01,"layoff",9
+"1153",2018-01-01,"layoff",14
+"1154",2018-02-01,"layoff",15
+"1155",2018-03-01,"layoff",15
+"1156",2018-04-01,"layoff",17
+"1157",2018-05-01,"layoff",11
+"1158",2018-06-01,"layoff",11
+"1159",2018-07-01,"layoff",10
+"1160",2018-08-01,"layoff",11
+"1161",2018-09-01,"layoff",10
+"1162",2018-10-01,"layoff",12
+"1163",2018-11-01,"layoff",12
+"1164",2018-12-01,"layoff",11
+"1165",2019-01-01,"layoff",17
+"1166",2019-02-01,"layoff",15
+"1167",2019-03-01,"layoff",13
+"1168",2019-04-01,"layoff",11
+"1169",2019-05-01,"layoff",12
+"1170",2019-06-01,"layoff",12
+"1171",2019-07-01,"layoff",12
+"1172",2019-08-01,"layoff",13
+"1173",2019-09-01,"layoff",12
+"1174",2019-10-01,"layoff",14
+"1175",2019-11-01,"layoff",12
+"1176",2019-12-01,"layoff",10
+"1177",2020-01-01,"layoff",13
+"1178",2020-02-01,"layoff",14
+"1179",2020-03-01,"layoff",48
+"1180",2020-04-01,"layoff",51
+"1181",2020-05-01,"layoff",30
+"1182",2020-06-01,"layoff",22
+"1183",2020-07-01,"layoff",21
+"1184",2020-08-01,"layoff",16
+"1185",2020-09-01,"layoff",16
+"1186",2020-10-01,"layoff",16
+"1187",2020-11-01,"layoff",10
+"1188",2020-12-01,"layoff",9
+"1189",2021-01-01,"layoff",9
+"1190",2021-02-01,"layoff",9
+"1191",2021-03-01,"layoff",7
+"1192",2021-04-01,"layoff",7
+"1193",2021-05-01,"layoff",7
+"1194",2021-06-01,"layoff",6
+"1195",2021-07-01,"layoff",6
+"1196",2021-08-01,"layoff",7
+"1197",2021-09-01,"layoff",6
+"1198",2021-10-01,"layoff",6
+"1199",2021-11-01,"layoff",6
+"1200",2021-12-01,"layoff",9
+"1201",2022-01-01,"layoff",6
+"1202",2022-02-01,"layoff",7
+"1203",2022-03-01,"layoff",6
+"1204",2022-04-01,"layoff",7
+"1205",2022-05-01,"layoff",11
+"1206",2022-06-01,"layoff",15
+"1207",2022-07-01,"layoff",14
+"1208",2022-08-01,"layoff",15
+"1209",2022-09-01,"layoff",12
+"1210",2022-10-01,"layoff",17
+"1211",2022-11-01,"layoff",46
+"1212",2022-12-01,"layoff",16
+"1213",2023-01-01,"layoff",38
+"1214",2023-02-01,"layoff",28
+"1215",2023-03-01,"layoff",28
+"1216",2023-04-01,"layoff",25
+"1217",2023-05-01,"layoff",21
+"1218",2023-06-01,"layoff",16
+"1219",2023-07-01,"layoff",15
+"1220",2023-08-01,"layoff",20
+"1221",2023-09-01,"layoff",17
+"1222",2023-10-01,"layoff",23
+"1223",2023-11-01,"layoff",19
+"1224",2023-12-01,"layoff",13
+"1225",2024-01-01,"layoff",28
+"1226",2024-02-01,"layoff",26
+"1227",2024-03-01,"layoff",18
+"1228",2024-04-01,"layoff",23
+"1229",2024-05-01,"layoff",18
+"1230",2024-06-01,"layoff",17
+"1231",2004-01-01,"unemployment",3
+"1232",2004-02-01,"unemployment",2
+"1233",2004-03-01,"unemployment",4
+"1234",2004-04-01,"unemployment",3
+"1235",2004-05-01,"unemployment",2
+"1236",2004-06-01,"unemployment",2
+"1237",2004-07-01,"unemployment",1
+"1238",2004-08-01,"unemployment",2
+"1239",2004-09-01,"unemployment",3
+"1240",2004-10-01,"unemployment",3
+"1241",2004-11-01,"unemployment",3
+"1242",2004-12-01,"unemployment",1
+"1243",2005-01-01,"unemployment",1
+"1244",2005-02-01,"unemployment",1
+"1245",2005-03-01,"unemployment",2
+"1246",2005-04-01,"unemployment",2
+"1247",2005-05-01,"unemployment",2
+"1248",2005-06-01,"unemployment",1
+"1249",2005-07-01,"unemployment",1
+"1250",2005-08-01,"unemployment",1
+"1251",2005-09-01,"unemployment",1
+"1252",2005-10-01,"unemployment",2
+"1253",2005-11-01,"unemployment",2
+"1254",2005-12-01,"unemployment",2
+"1255",2006-01-01,"unemployment",1
+"1256",2006-02-01,"unemployment",1
+"1257",2006-03-01,"unemployment",1
+"1258",2006-04-01,"unemployment",2
+"1259",2006-05-01,"unemployment",1
+"1260",2006-06-01,"unemployment",1
+"1261",2006-07-01,"unemployment",1
+"1262",2006-08-01,"unemployment",1
+"1263",2006-09-01,"unemployment",1
+"1264",2006-10-01,"unemployment",1
+"1265",2006-11-01,"unemployment",1
+"1266",2006-12-01,"unemployment",1
+"1267",2007-01-01,"unemployment",1
+"1268",2007-02-01,"unemployment",1
+"1269",2007-03-01,"unemployment",1
+"1270",2007-04-01,"unemployment",1
+"1271",2007-05-01,"unemployment",1
+"1272",2007-06-01,"unemployment",1
+"1273",2007-07-01,"unemployment",1
+"1274",2007-08-01,"unemployment",1
+"1275",2007-09-01,"unemployment",1
+"1276",2007-10-01,"unemployment",1
+"1277",2007-11-01,"unemployment",1
+"1278",2007-12-01,"unemployment",1
+"1279",2008-01-01,"unemployment",2
+"1280",2008-02-01,"unemployment",2
+"1281",2008-03-01,"unemployment",2
+"1282",2008-04-01,"unemployment",2
+"1283",2008-05-01,"unemployment",2
+"1284",2008-06-01,"unemployment",2
+"1285",2008-07-01,"unemployment",1
+"1286",2008-08-01,"unemployment",1
+"1287",2008-09-01,"unemployment",3
+"1288",2008-10-01,"unemployment",4
+"1289",2008-11-01,"unemployment",5
+"1290",2008-12-01,"unemployment",4
+"1291",2009-01-01,"unemployment",5
+"1292",2009-02-01,"unemployment",9
+"1293",2009-03-01,"unemployment",7
+"1294",2009-04-01,"unemployment",4
+"1295",2009-05-01,"unemployment",4
+"1296",2009-06-01,"unemployment",4
+"1297",2009-07-01,"unemployment",4
+"1298",2009-08-01,"unemployment",3
+"1299",2009-09-01,"unemployment",4
+"1300",2009-10-01,"unemployment",4
+"1301",2009-11-01,"unemployment",5
+"1302",2009-12-01,"unemployment",4
+"1303",2010-01-01,"unemployment",4
+"1304",2010-02-01,"unemployment",4
+"1305",2010-03-01,"unemployment",5
+"1306",2010-04-01,"unemployment",4
+"1307",2010-05-01,"unemployment",3
+"1308",2010-06-01,"unemployment",4
+"1309",2010-07-01,"unemployment",6
+"1310",2010-08-01,"unemployment",3
+"1311",2010-09-01,"unemployment",3
+"1312",2010-10-01,"unemployment",3
+"1313",2010-11-01,"unemployment",4
+"1314",2010-12-01,"unemployment",5
+"1315",2011-01-01,"unemployment",4
+"1316",2011-02-01,"unemployment",4
+"1317",2011-03-01,"unemployment",3
+"1318",2011-04-01,"unemployment",3
+"1319",2011-05-01,"unemployment",2
+"1320",2011-06-01,"unemployment",3
+"1321",2011-07-01,"unemployment",3
+"1322",2011-08-01,"unemployment",3
+"1323",2011-09-01,"unemployment",3
+"1324",2011-10-01,"unemployment",3
+"1325",2011-11-01,"unemployment",3
+"1326",2011-12-01,"unemployment",3
+"1327",2012-01-01,"unemployment",3
+"1328",2012-02-01,"unemployment",4
+"1329",2012-03-01,"unemployment",3
+"1330",2012-04-01,"unemployment",3
+"1331",2012-05-01,"unemployment",3
+"1332",2012-06-01,"unemployment",2
+"1333",2012-07-01,"unemployment",2
+"1334",2012-08-01,"unemployment",3
+"1335",2012-09-01,"unemployment",4
+"1336",2012-10-01,"unemployment",5
+"1337",2012-11-01,"unemployment",4
+"1338",2012-12-01,"unemployment",2
+"1339",2013-01-01,"unemployment",3
+"1340",2013-02-01,"unemployment",3
+"1341",2013-03-01,"unemployment",2
+"1342",2013-04-01,"unemployment",2
+"1343",2013-05-01,"unemployment",2
+"1344",2013-06-01,"unemployment",2
+"1345",2013-07-01,"unemployment",1
+"1346",2013-08-01,"unemployment",1
+"1347",2013-09-01,"unemployment",2
+"1348",2013-10-01,"unemployment",3
+"1349",2013-11-01,"unemployment",2
+"1350",2013-12-01,"unemployment",2
+"1351",2014-01-01,"unemployment",3
+"1352",2014-02-01,"unemployment",3
+"1353",2014-03-01,"unemployment",3
+"1354",2014-04-01,"unemployment",3
+"1355",2014-05-01,"unemployment",2
+"1356",2014-06-01,"unemployment",1
+"1357",2014-07-01,"unemployment",1
+"1358",2014-08-01,"unemployment",1
+"1359",2014-09-01,"unemployment",1
+"1360",2014-10-01,"unemployment",2
+"1361",2014-11-01,"unemployment",2
+"1362",2014-12-01,"unemployment",2
+"1363",2015-01-01,"unemployment",2
+"1364",2015-02-01,"unemployment",2
+"1365",2015-03-01,"unemployment",2
+"1366",2015-04-01,"unemployment",2
+"1367",2015-05-01,"unemployment",2
+"1368",2015-06-01,"unemployment",1
+"1369",2015-07-01,"unemployment",1
+"1370",2015-08-01,"unemployment",1
+"1371",2015-09-01,"unemployment",1
+"1372",2015-10-01,"unemployment",1
+"1373",2015-11-01,"unemployment",2
+"1374",2015-12-01,"unemployment",2
+"1375",2016-01-01,"unemployment",2
+"1376",2016-02-01,"unemployment",2
+"1377",2016-03-01,"unemployment",2
+"1378",2016-04-01,"unemployment",2
+"1379",2016-05-01,"unemployment",1
+"1380",2016-06-01,"unemployment",1
+"1381",2016-07-01,"unemployment",1
+"1382",2016-08-01,"unemployment",1
+"1383",2016-09-01,"unemployment",1
+"1384",2016-10-01,"unemployment",1
+"1385",2016-11-01,"unemployment",2
+"1386",2016-12-01,"unemployment",2
+"1387",2017-01-01,"unemployment",2
+"1388",2017-02-01,"unemployment",2
+"1389",2017-03-01,"unemployment",2
+"1390",2017-04-01,"unemployment",2
+"1391",2017-05-01,"unemployment",1
+"1392",2017-06-01,"unemployment",1
+"1393",2017-07-01,"unemployment",1
+"1394",2017-08-01,"unemployment",1
+"1395",2017-09-01,"unemployment",1
+"1396",2017-10-01,"unemployment",1
+"1397",2017-11-01,"unemployment",1
+"1398",2017-12-01,"unemployment",2
+"1399",2018-01-01,"unemployment",2
+"1400",2018-02-01,"unemployment",2
+"1401",2018-03-01,"unemployment",1
+"1402",2018-04-01,"unemployment",1
+"1403",2018-05-01,"unemployment",1
+"1404",2018-06-01,"unemployment",1
+"1405",2018-07-01,"unemployment",1
+"1406",2018-08-01,"unemployment",1
+"1407",2018-09-01,"unemployment",1
+"1408",2018-10-01,"unemployment",2
+"1409",2018-11-01,"unemployment",2
+"1410",2018-12-01,"unemployment",2
+"1411",2019-01-01,"unemployment",2
+"1412",2019-02-01,"unemployment",2
+"1413",2019-03-01,"unemployment",1
+"1414",2019-04-01,"unemployment",2
+"1415",2019-05-01,"unemployment",1
+"1416",2019-06-01,"unemployment",1
+"1417",2019-07-01,"unemployment",1
+"1418",2019-08-01,"unemployment",1
+"1419",2019-09-01,"unemployment",1
+"1420",2019-10-01,"unemployment",1
+"1421",2019-11-01,"unemployment",1
+"1422",2019-12-01,"unemployment",1
+"1423",2020-01-01,"unemployment",2
+"1424",2020-02-01,"unemployment",2
+"1425",2020-03-01,"unemployment",27
+"1426",2020-04-01,"unemployment",100
+"1427",2020-05-01,"unemployment",48
+"1428",2020-06-01,"unemployment",34
+"1429",2020-07-01,"unemployment",44
+"1430",2020-08-01,"unemployment",45
+"1431",2020-09-01,"unemployment",28
+"1432",2020-10-01,"unemployment",20
+"1433",2020-11-01,"unemployment",16
+"1434",2020-12-01,"unemployment",36
+"1435",2021-01-01,"unemployment",29
+"1436",2021-02-01,"unemployment",17
+"1437",2021-03-01,"unemployment",29
+"1438",2021-04-01,"unemployment",13
+"1439",2021-05-01,"unemployment",24
+"1440",2021-06-01,"unemployment",19
+"1441",2021-07-01,"unemployment",16
+"1442",2021-08-01,"unemployment",10
+"1443",2021-09-01,"unemployment",6
+"1444",2021-10-01,"unemployment",3
+"1445",2021-11-01,"unemployment",3
+"1446",2021-12-01,"unemployment",2
+"1447",2022-01-01,"unemployment",3
+"1448",2022-02-01,"unemployment",3
+"1449",2022-03-01,"unemployment",2
+"1450",2022-04-01,"unemployment",2
+"1451",2022-05-01,"unemployment",2
+"1452",2022-06-01,"unemployment",1
+"1453",2022-07-01,"unemployment",1
+"1454",2022-08-01,"unemployment",1
+"1455",2022-09-01,"unemployment",1
+"1456",2022-10-01,"unemployment",2
+"1457",2022-11-01,"unemployment",2
+"1458",2022-12-01,"unemployment",1
+"1459",2023-01-01,"unemployment",2
+"1460",2023-02-01,"unemployment",2
+"1461",2023-03-01,"unemployment",2
+"1462",2023-04-01,"unemployment",2
+"1463",2023-05-01,"unemployment",1
+"1464",2023-06-01,"unemployment",1
+"1465",2023-07-01,"unemployment",1
+"1466",2023-08-01,"unemployment",1
+"1467",2023-09-01,"unemployment",1
+"1468",2023-10-01,"unemployment",1
+"1469",2023-11-01,"unemployment",1
+"1470",2023-12-01,"unemployment",1
+"1471",2024-01-01,"unemployment",2
+"1472",2024-02-01,"unemployment",2
+"1473",2024-03-01,"unemployment",2
+"1474",2024-04-01,"unemployment",2
+"1475",2024-05-01,"unemployment",1
+"1476",2024-06-01,"unemployment",1

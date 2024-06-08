@@ -22,6 +22,7 @@ library(tidyquant)
 library(PerformanceAnalytics)
 library(gridExtra)
 library(cowplot)
+library(lubridate)
 
 # set api key
 fredr_set_key('2ce72ebb6c7e053880ec7ad5a950237f')
@@ -32,7 +33,7 @@ fredr_set_key('2ce72ebb6c7e053880ec7ad5a950237f')
 
 # gather data
 start_date <- "1978-01-01"
-end_date <- "2023-11-01"
+end_date <- "2024-03-01"
 
 # UMICH Consumer Sentiment Index: https://fred.stlouisfed.org/series/UMCSENT
 consumer_sentiment <- fredr(
@@ -163,7 +164,7 @@ recession_indicator_modified <- process(recession_indicator, 'recession_indicato
 
 # breakout quarters to months for house data
 house_modified <- house_modified %>%
-  complete(date = seq.Date(min(date), max(date), by = "month")) %>%
+  complete(date = seq.Date(min(date), max(date) %m+% months(2), by = "month")) %>%
   fill(house)
 
 # process sp500 data
@@ -174,8 +175,8 @@ sp500_modified <- as.data.frame(GSPC) %>%
     group_by(date) %>%
     summarize(avg_close = mean(GSPC.Close)) %>%
     mutate(sp500 = ((avg_close - lag(avg_close, 12)) / lag(avg_close, 12)) * 100) %>%
-    select(-avg_close) %>%
-    filter(date >= start_date)
+    select(-avg_close) #%>%
+    #filter(date >= start_date)
 
 # process dollar_index data
 dollar_index_modified <- as.data.frame(`DX-Y.NYB`) %>%
@@ -186,8 +187,8 @@ dollar_index_modified <- as.data.frame(`DX-Y.NYB`) %>%
     group_by(date) %>%
     summarize(avg_close = mean(`DX-Y.NYB.Close`)) %>%
     mutate(dollar_index = ((avg_close - lag(avg_close, 12)) / lag(avg_close, 12)) * 100) %>%
-    select(-avg_close) %>%
-    filter(date >= start_date)
+    select(-avg_close) #%>%
+    #filter(date >= start_date)
 
 ```
 
@@ -312,7 +313,7 @@ forecast_consumption <- forecast(fit, new_data = test)
 forecast_consumption %>% 
   autoplot(as_tsibble(final)) + 
     labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators from 1978-2016") +
-    ggtitle("Expected vs Actual Consumer Sentiment from 1978 to 2023") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 1978 to 2024") +
     labs(caption = "Note: Economic indicators used in estimating consumer sentiment include unemployement rate, YOY % change in unemployment rate, 
 YOY % change in median real disposable income, YOY % change in personal consumption, YOY % change in consumer price index, 
 YOY % change in S&P 500 index, YOY % change in dollar index, Avg 30-year mortgage rate, YOY % change in mortgage rate, 
@@ -345,7 +346,7 @@ forecast_consumption <- forecast(fit, new_data = test)
 forecast_consumption %>% 
   autoplot(plot_range) + 
     labs(level = 'Level', x = "", y = "UMICH Consumer Sentiment", subtitle="Based on Economic Indicators from 1978-2016") +
-    ggtitle("Expected vs Actual Consumer Sentiment from 2017 to 2023") +
+    ggtitle("Expected vs Actual Consumer Sentiment from 2017 to 2024") +
     labs(caption = "Note: Economic indicators used in estimating consumer sentiment include unemployement rate, YOY % change in unemployment rate, 
 YOY % change in median real disposable income, YOY % change in personal consumption, YOY % change in consumer price index, 
 YOY % change in S&P 500 index, YOY % change in dollar index, Avg 30-year mortgage rate, YOY % change in mortgage rate, 
@@ -358,7 +359,7 @@ Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance | Visual by Micha
 
 ```
 
-```{r warning=FALSE}
+```{r eval = FALSE}
 
 # adding google trends
 # https://trends.google.com/trends/explore?cat=16&date=all&geo=US&q=recession&hl=en
@@ -367,28 +368,58 @@ Source: Federal Reserve Bank of St Louis (FRED), Yahoo Finance | Visual by Micha
 # news category is represented with 16, all categories is 0
 
 
-# search1 <- gtrends(c("inflation"), category = 16, time= "all", geo = "US")$interest_over_time %>%
-#   select(date, keyword, hits)
+# search1 <- gtrends(c("inflation"), category = 0, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
 # 
-# search2 <- gtrends(c("recession"), category = 16, time= "all", geo = "US")$interest_over_time %>%
-#   select(date, keyword, hits)
+# search2 <- gtrends(c("recession"), category = 0, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
 # 
-# search3 <- gtrends(c("prices"), category = 16, time= "all", geo = "US")$interest_over_time %>%
-#   select(date, keyword, hits)
-#
-# search4 <- gtrends(c("interest rates"), category = 16, time= "all", geo = "US")$interest_over_time %>%
-#   select(date, keyword, hits)
-#
-# search5 <- gtrends(c("layoff"), category = 16, time= "all", geo = "US")$interest_over_time %>%
-#   select(date, keyword, hits)
-#
-# search6 <- gtrends(c("unemployment"), category = 16, time= "all", geo = "US")$interest_over_time %>%
-#   select(date, keyword, hits)
+# search3 <- gtrends(c("prices"), category = 0, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search4 <- gtrends(c("interest rates"), category = 0, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search5 <- gtrends(c("layoff"), category = 0, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search6 <- gtrends(c("unemployment"), category = 0, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
 # 
 # search <- union(search1, union(search2, union(search3, union(search4, union(search5, search6)))))
+# 
+# write.csv(search, "GTrends Exported - All.csv")
+# 
+# 
+# search1_news <- gtrends(c("inflation"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search2_news <- gtrends(c("recession"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search3_news <- gtrends(c("prices"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search4_news <- gtrends(c("interest rates"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search5_news <- gtrends(c("layoff"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search6_news <- gtrends(c("unemployment"), category = 16, time= "all", geo = "US")$interest_over_time %>%
+#    select(date, keyword, hits)
+# 
+# search_news <- union(search1_news, union(search2_news, union(search3_news, union(search4_news, union(search5_news, search6_news)))))
+# 
+# write.csv(search_news, "GTrends Exported - News.csv")
+
+```
+
+```{r}
 
 search <- read.csv("GTrends Exported - All.csv") %>%
-    mutate(date = as.Date(date))
+    mutate(date = as.Date(date)) %>%
+    filter(date <= end_date)
 
 search_pivoted <- search %>%
   pivot_wider(names_from = keyword, values_from = hits) %>%
@@ -397,7 +428,7 @@ search_pivoted <- search %>%
 p <- ggplot() + 
   geom_line(data = search, aes(x = date, y = hits, col = keyword)) +
   labs(x = "", y = "Interest over time", subtitle="Among All Categories in US, Normalized 0 to 100, Monthly", color = 'Keyword') +
-  ggtitle("Google Search Trend for Keywords from 2004 to 2023") +
+  ggtitle("Google Search Trend for Keywords from 2004 to 2024") +
   labs(legend = 'Keyword', caption = "Source: Google | Visual by Michael Dunphy, @mtdunphy") +
   scale_x_date(date_breaks = '3 year', date_labels = "%Y") +
   theme_minimal() +
@@ -415,10 +446,11 @@ combined_long <- final %>%
   left_join(search, by = c('date' = 'date'))
 
 # correlation matrix
-cor_matrix <- cor(combined_wide %>% select(-date))
-chart.Correlation(cor_matrix)
+#cor_matrix <- cor(combined_wide %>% select(-date))
+#chart.Correlation(cor_matrix)
 
 ```
+
 
 ```{r warning = FALSE}
 
@@ -473,7 +505,7 @@ visualize_grids <- function(grid, category) {
   visual <- ggdraw() + 
     draw_plot(grid, x = 0, y = .2, width = 1, height = .7) +
     theme(plot.margin = margin(t = 20, r = 5, b = 30, l = 5)) +
-    draw_label("Expected vs Actual Consumer Sentiment from 2017 to 2023", x = .05, y = 1, size = 14, hjust = 0) +
+    draw_label("Expected vs Actual Consumer Sentiment from 2017 to 2024", x = .05, y = 1, size = 14, hjust = 0) +
     draw_label(paste("Based on Economic Indicators + Google Search Trend among ", category, " Categories", sep = ''), x = .05, y = .94, size = 10, hjust = 0) +
     draw_label(paste("Note: Google search trend is among ", category, " categories in the US. Economic indicators used in estimating consumer sentiment include 
 unemployement rate, YOY % change in unemployment rate, YOY % change in median real disposable income, YOY % change in 
@@ -497,7 +529,8 @@ visualize_grids(grid3, 'All')
 
 # keywords in the context of news
 search <- read.csv("GTrends Exported - News.csv") %>%
-    mutate(date = as.Date(date))
+    mutate(date = as.Date(date)) %>%
+    filter(date <= end_date)
 
 search_pivoted <- search %>%
   pivot_wider(names_from = keyword, values_from = hits) %>%
@@ -506,7 +539,7 @@ search_pivoted <- search %>%
 p <- ggplot() + 
   geom_line(data = search, aes(x = date, y = hits, col = keyword)) +
   labs(x = "", y = "Interest over time", subtitle="Among News Categories in US, Normalized 0 to 100, Monthly", color = 'Keyword') +
-  ggtitle("Google Search Trend for Keywords from 2004 to 2023") +
+  ggtitle("Google Search Trend for Keywords from 2004 to 2024") +
   labs(legend = 'Keyword', caption = "Source: Google | Visual by Michael Dunphy, @mtdunphy") +
   scale_x_date(date_breaks = '3 year', date_labels = "%Y") +
   theme_minimal() +
@@ -524,8 +557,8 @@ combined_long <- final %>%
   left_join(search, by = c('date' = 'date'))
 
 # correlation matrix
-cor_matrix <- cor(combined_wide %>% select(-date))
-chart.Correlation(cor_matrix)
+#cor_matrix <- cor(combined_wide %>% select(-date))
+#chart.Correlation(cor_matrix)
 
 ```
 ```{r}
